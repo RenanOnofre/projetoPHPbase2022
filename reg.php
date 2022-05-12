@@ -56,6 +56,7 @@ if(isset($_POST['sub'])){
                                 <option value=$nomeItem>$nomeItem</option>
                                 ";
                             }
+                            ?>
                     </td>
                 </tr>
                 <tr>
