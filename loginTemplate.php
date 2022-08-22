@@ -1,10 +1,10 @@
-<?php 
-  include 'connect.php';
-  include 'checkLogin.php';
-  $s="select *from reg where id='$_SESSION[id]'";
-  $qu= mysqli_query($con, $s);
-  $f=mysqli_fetch_assoc($qu);
-
+<?php
+    include 'connect.php';
+    include 'checkLogin.php';
+    $s="select*from reg where id='$_SESSION[id]'";
+    $qu= mysqli_query($con, $s);
+    $f=mysqli_fetch_assoc($qu);
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
