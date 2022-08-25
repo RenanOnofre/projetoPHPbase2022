@@ -1,26 +1,27 @@
 <?php
     include 'connect.php';
-    $s="select*from reg where id='$_SESSION[id]'";
-    $qu= mysqli_query($con, $s);
-    $f=mysqli_fetch_assoc($qu); 
-
     if(isset($_POST['sub'])){
       $t=$_POST['text'];
       $u=$_POST['user'];
       $p=$_POST['pass'];
       $c=$_POST['city'];
       $g=$_POST['gen'];
-      /*if($_FILES['f1']['name']){
+      if($_FILES['f1']['name']){
       move_uploaded_file($_FILES['f1']['tmp_name'], "image/".$_FILES['f1']['name']);
       $img="image/".$_FILES['f1']['name'];
       }
       else{
           $img=$_POST['img1'];
-      } ,image='$img'*/
-      $i="update reg set name='$t',username='$u',password='$p',city='$c',gender='$g' where id='$_SESSION[id]'";
+      }
+      $i="update reg set name='$t',username='$u',password='$p',city='$c',gender='$g',image='$img' where id='$_SESSION[id]'";
       mysqli_query($con, $i);
-      header('location:homeTemplate.php');
+      header('location:home.php');
   }
+
+    $s="select*from reg where id='$_SESSION[id]'";
+    $qu= mysqli_query($con, $s);
+    $f=mysqli_fetch_assoc($qu);
+    
 ?>
 <?php include 'Components/head.php'; ?>
 
@@ -39,7 +40,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="homeTemplate.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
               <li class="breadcrumb-item active">User Profile</li>
             </ol>
           </div>
@@ -347,41 +348,35 @@
                   <!-- /.tab-pane -->
 
                   <div class="tab-pane" id="settings">
-                    <form class="form-horizontal" method="POST">
+                    <form class="form-horizontal">
                       <div class="form-group row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Email</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputName" placeholder="Name" name="name" value="<?php echo $f['name']?>">
-                        </div>
-                      </div>
-                      <!--<div class="form-group row">
-                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
-                        <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" value="<?php echo $f['email']?>">
-                        </div>
-                      </div> -->
-                      <div class="form-group row">
-                        <label for="inputUser" class="col-sm-2 col-form-label">Username</label>
-                        <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputUser" placeholder="Username" name="user" value="<?php echo $f['username']?>">
+                          <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="inputCity" class="col-sm-2 col-form-label">City</label>
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Número de contato</label>
                         <div class="col-sm-10">
-                        <input type="text" class="form-control" id="inputCity" placeholder="City" name="city" value="<?php echo $f['city']?>">
+                          <input type="text" class="form-control" id="inputContato" placeholder="Contato" name="contato">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="inputGender" class="col-sm-2 col-form-label">Gender</label>
+                        < <label for="inputEmail" class="col-sm-2 col-form-label">Renda mensal</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputGender" placeholder="gender" name="gender" value="<?php echo $f['gender']?>">
+                          <input type="text" class="form-control" id="inputRenda" placeholder="Renda" name="renda">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="inputPass" class="col-sm-2 col-form-label">Password</label>
+                      <label for="inputEmail" class="col-sm-2 col-form-label">Endereço Residencial</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputPass" placeholder="Password" name="pass" value="<?php echo $f['password']?>">
+                          <input type="text" class="form-control" id="inputEndereco" placeholder="Endereco" name="endereco">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputSkills" class="col-sm-2 col-form-label">Password</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputSkills" placeholder="Skills" name="pass">
                         </div>
                       </div>
                       <div class="form-group row">
@@ -399,7 +394,7 @@
                         </div>
                       </div>
                     </form>
-                  </div>
+                  </div> 
                   <!-- /.tab-pane -->
                 </div>
                 <!-- /.tab-content -->
