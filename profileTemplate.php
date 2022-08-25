@@ -1,3 +1,10 @@
+<?php
+    include 'connect.php';
+    $s="select*from reg where id='$_SESSION[id]'";
+    $qu= mysqli_query($con, $s);
+    $f=mysqli_fetch_assoc($qu);
+    
+?>
 <?php include 'Components/head.php'; ?>
 
   <!-- Preloader -->
@@ -33,12 +40,11 @@
             <div class="card card-primary card-outline">
               <div class="card-body box-profile">
                 <div class="text-center">
-                  <img class="profile-user-img img-fluid img-circle"
-                       src="AdminLTE-3.2.0/dist/img/user4-128x128.jpg"
-                       alt="User profile picture">
+                <img src="image/anon.png" class="img-circle elevation-2"
+                       alt="User profile picture" width=100>
                 </div>
 
-                <h3 class="profile-username text-center">Nina Mcintire</h3>
+                <h3 class="profile-username text-center"><?php echo $f['name'];?></h3>
 
                 <p class="text-muted text-center">Software Engineer</p>
 
@@ -328,7 +334,7 @@
                       <div class="form-group row">
                         <label for="inputName" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
-                          <input type="email" class="form-control" id="inputName" placeholder="Name">
+                          <input type="text" class="form-control" id="inputName" placeholder="Name">
                         </div>
                       </div>
                       <div class="form-group row">
