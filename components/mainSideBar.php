@@ -13,7 +13,7 @@
         <img src="image/anon.png" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a class="d-block"><?php echo $f['name'];?></a>
+          <a class="d-block"><?php echo $f['username'];?></a>
         </div>
       </div>
 
