@@ -1,6 +1,6 @@
 <?php
     include 'connect.php';
-    $s="select*from reg where id='$_SESSION[id]'";
+    $s="select*from funcionario where id='$_SESSION[id]'";
     $qu= mysqli_query($con, $s);
     $f=mysqli_fetch_assoc($qu); 
 
@@ -8,6 +8,7 @@
       $t=$_POST['text'];
       $u=$_POST['user'];
       $p=$_POST['pass'];
+      $r=$_POST['setor'];
       $c=$_POST['city'];
       $g=$_POST['gen'];
       /*if($_FILES['f1']['name']){
@@ -17,12 +18,12 @@
       else{
           $img=$_POST['img1'];
       } ,image='$img'*/
-      $i="update reg set name='$t',username='$u',password='$p',city='$c',gender='$g' where id='$_SESSION[id]'";
+      $i="update funcionario set name='$t',username='$u',password='$p',retypePassword='$r', city='$c',gender='$g' where id='$_SESSION[id]'";
       mysqli_query($con, $i);
-      header('location:homeTemplate.php');
+      header('location:homeFun.php');
   }
 ?>
-<?php include 'Components/head.php'; ?>
+<?php include 'Components/headFun.php'; ?>
 
   <!-- Preloader -->
 
@@ -39,7 +40,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="homeTemplate.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="homeFun.php">Home</a></li>
               <li class="breadcrumb-item active">User Profile</li>
             </ol>
           </div>
@@ -66,11 +67,14 @@
                 <p class="text-muted text-center">Software Engineer</p>
 
                 <ul class="list-group list-group-unbordered mb-3">
-                <li class="list-group-item">
+                  <li class="list-group-item">
                     <b>Nome</b> <a class="float-right"><?php echo $f['name'];?></a>
                   </li>
                   <li class="list-group-item">
                     <b>Genero</b> <a class="float-right"><?php echo $f['gender'];?></a>
+                  </li>
+                  <li class="list-group-item">
+                    <b>Setor</b> <a class="float-right"><?php echo $f['retypePassword'];?></a>
                   </li>
                   <li class="list-group-item">
                     <b>Cidade</b> <a class="float-right"><?php echo $f['city'];?></a>
@@ -354,10 +358,22 @@
                           <input type="text" class="form-control" id="inputName" placeholder="Name" name="name" value="<?php echo $f['name']?>">
                         </div>
                       </div>
+                      <!--<div class="form-group row">
+                        <label for="inputEmail" class="col-sm-2 col-form-label">Email</label>
+                        <div class="col-sm-10">
+                          <input type="email" class="form-control" id="inputEmail" placeholder="Email" name="email" value="<?php echo $f['email']?>">
+                        </div>
+                      </div> -->
                       <div class="form-group row">
                         <label for="inputUser" class="col-sm-2 col-form-label">Username</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" id="inputUser" placeholder="Username" name="user" value="<?php echo $f['username']?>">
+                        </div>
+                      </div>
+                      <div class="form-group row">
+                        <label for="inputUser" class="col-sm-2 col-form-label">Setor</label>
+                        <div class="col-sm-10">
+                          <input type="text" class="form-control" id="inputUser" placeholder="Username" name="setor" value="<?php echo $f['retypePassword']?>">
                         </div>
                       </div>
                       <div class="form-group row">

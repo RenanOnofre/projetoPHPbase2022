@@ -4,14 +4,14 @@ if(isset($_POST['sub'])){
     $t=$_POST['text'];
     $u=$_POST['user'];
     $p=$_POST['pass'];
-    $r=$_POST['setor'];
+    $r=$_POST['rpass'];
     $c=$_POST['city'];
     $g=$_POST['gen'];
     if($_FILES['f1']['name']){
     move_uploaded_file($_FILES['f1']['tmp_name'], "image/".$_FILES['f1']['name']);
     $img="image/".$_FILES['f1']['name'];
     }
-    $i="insert into funcionario(name,username,password,retypePassword,city,image,gender)value('$t','$u','$p', '$r', '$c','$img','$g')";
+    $i="insert into reg(name,username,password,city,image,gender)value('$t','$u','$p','$c','$img','$g')";
     mysqli_query($con, $i);
 }
 ?>
@@ -20,7 +20,7 @@ if(isset($_POST['sub'])){
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Funcionário | Registro</title>
+  <title>Usuário | Registro</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -38,7 +38,7 @@ if(isset($_POST['sub'])){
       <a href="../../index2.html" class="h1"><b>Registro</b></a>
     </div>
     <div class="card-body">
-      <p class="login-box-msg">Registrar novo funcionário</p>
+      <p class="login-box-msg">Registrar novo Usuário</p>
 
       <form method="post">
         <div class="input-group mb-3">
@@ -53,7 +53,7 @@ if(isset($_POST['sub'])){
           <input type="text" class="form-control" placeholder="Usuário" name="user">
           <div class="input-group-append">
             <div class="input-group-text">
-              <span class="fas fa-user"></span>
+              <span class="fas fa-envelope"></span>
             </div>
           </div>
         </div>
@@ -62,14 +62,6 @@ if(isset($_POST['sub'])){
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
-            </div>
-          </div>
-        </div>
-        <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Setor" name="setor">
-          <div class="input-group-append">
-            <div class="input-group-text">
-              <span class="fas fa-envelope"></span>
             </div>
           </div>
         </div>
@@ -125,7 +117,7 @@ if(isset($_POST['sub'])){
         </a>
       </div>
 
-      <a href="loginFun.php" class="text-center">Eu já sou um funcionário</a>
+      <a href="loginTemplate.php" class="text-center">Eu já sou um Usuário</a>
     </div>
     <!-- /.form-box -->
   </div><!-- /.card -->
