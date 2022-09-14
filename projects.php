@@ -1,3 +1,27 @@
+<?php
+    include 'connect.php';
+    $s="select*from reg where id='$_SESSION[id]'";
+    $qu= mysqli_query($con, $s);
+    $f=mysqli_fetch_assoc($qu); 
+
+    if(isset($_POST['sub'])){
+      $t=$_POST['text'];
+      $u=$_POST['user'];
+      $p=$_POST['pass'];
+      $c=$_POST['city'];
+      $g=$_POST['gen'];
+      /*if($_FILES['f1']['name']){
+      move_uploaded_file($_FILES['f1']['tmp_name'], "image/".$_FILES['f1']['name']);
+      $img="image/".$_FILES['f1']['name'];
+      }
+      else{
+          $img=$_POST['img1'];
+      } ,image='$img'*/
+      $i="update reg set name='$t',username='$u',password='$p',city='$c',gender='$g' where id='$_SESSION[id]'";
+      mysqli_query($con, $i);
+      header('location:homeTemplate.php');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -853,7 +877,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Projects</h3>
+          <h3 class="card-title">Informações</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -872,16 +896,16 @@
                           #
                       </th>
                       <th style="width: 20%">
-                          Project Name
+                          Nome
                       </th>
                       <th style="width: 30%">
-                          Team Members
+                          Imagem
                       </th>
                       <th>
-                          Project Progress
+                          Username
                       </th>
                       <th style="width: 8%" class="text-center">
-                          Status
+                          Gênero
                       </th>
                       <th style="width: 20%">
                       </th>
@@ -894,53 +918,37 @@
                       </td>
                       <td>
                           <a>
-                              AdminLTE v3
+                          <?php echo $f['name'];?>
                           </a>
-                          <br/>
-                          <small>
-                              Created 01.01.2019
-                          </small>
                       </td>
                       <td>
                           <ul class="list-inline">
                               <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="AdminLTE-3.2.0/dist/img/avatar.png">
-                              </li>
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="AdminLTE-3.2.0/dist/img/avatar2.png">
-                              </li>
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="AdminLTE-3.2.0/dist/img/avatar3.png">
-                              </li>
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="AdminLTE-3.2.0/dist/img/avatar4.png">
+                                  <img alt="Avatar" class="table-avatar" src="image/anon.png">
                               </li>
                           </ul>
                       </td>
                       <td class="project_progress">
-                          <div class="progress progress-sm">
-                              <div class="progress-bar bg-green" role="progressbar" aria-valuenow="57" aria-valuemin="0" aria-valuemax="100" style="width: 57%">
-                              </div>
-                          </div>
-                          <small>
-                              57% Complete
-                          </small>
+                          
+                              <?php echo $f['username'];?>
+                          
+                        
                       </td>
                       <td class="project-state">
-                          <span class="badge badge-success">Success</span>
+                          <span class="badge badge-success"><?php echo $f['gender'];?></span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="#">
+                          <a class="btn btn-primary btn-sm" href="homeTemplate.php">
                               <i class="fas fa-folder">
                               </i>
                               View
                           </a>
-                          <a class="btn btn-info btn-sm" href="#">
+                          <a class="btn btn-info btn-sm" href="profileTemplate.php">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit
                           </a>
-                          <a class="btn btn-danger btn-sm" href="#">
+                          <a class="btn btn-danger btn-sm" href="delete.php">
                               <i class="fas fa-trash">
                               </i>
                               Delete
