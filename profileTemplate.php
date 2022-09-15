@@ -351,7 +351,7 @@
                       <div class="form-group row">
                         <label for="inputName" class="col-sm-2 col-form-label">Name</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputName" placeholder="Name" name="name" value="<?php echo $f['name']?>">
+                          <input type="text" class="form-control" id="inputName" placeholder="Name" name="text" value="<?php echo $f['name']?>">
                         </div>
                       </div>
                       <div class="form-group row">
@@ -369,7 +369,7 @@
                       <div class="form-group row">
                         <label for="inputGender" class="col-sm-2 col-form-label">Gender</label>
                         <div class="col-sm-10">
-                          <input type="text" class="form-control" id="inputGender" placeholder="gender" name="gender" value="<?php echo $f['gender']?>">
+                          <input type="text" class="form-control" id="inputGender" placeholder="gender" name="gen" value="<?php echo $f['gender']?>">
                         </div>
                       </div>
                       <div class="form-group row">

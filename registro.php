@@ -8,9 +8,9 @@ if(isset($_POST['sub'])){
     $c=$_POST['city'];
     $g=$_POST['gen'];
     if($_FILES['f1']['name']){
-    move_uploaded_file($_FILES['f1']['tmp_name'], "image/".$_FILES['f1']['name']);
-    $img="image/".$_FILES['f1']['name'];
-    }
+      move_uploaded_file($_FILES['f1']['tmp_name'], "image/".$_FILES['f1']['name']);
+      $img="image/".$_FILES['f1']['name'];
+      }
     $i="insert into funcionario(name,username,password,retypePassword,city,image,gender)value('$t','$u','$p', '$r', '$c','$img','$g')";
     mysqli_query($con, $i);
 }

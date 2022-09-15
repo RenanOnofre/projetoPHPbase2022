@@ -1,6 +1,6 @@
 <?php
     include 'connect.php';
-    $s="select*from reg where id='$_SESSION[id]'";
+    $s="select*from funcionario where id='$_SESSION[id]'";
     $qu= mysqli_query($con, $s);
     $f=mysqli_fetch_assoc($qu); 
 
@@ -8,6 +8,7 @@
       $t=$_POST['text'];
       $u=$_POST['user'];
       $p=$_POST['pass'];
+      $r=$_POST['setor'];
       $c=$_POST['city'];
       $g=$_POST['gen'];
       /*if($_FILES['f1']['name']){
@@ -17,12 +18,11 @@
       else{
           $img=$_POST['img1'];
       } ,image='$img'*/
-      $i="update reg set name='$t',username='$u',password='$p',city='$c',gender='$g' where id='$_SESSION[id]'";
+      $i="update funcionario set name='$t',username='$u',password='$p',retypePassword='$r', city='$c',gender='$g' where id='$_SESSION[id]'";
       mysqli_query($con, $i);
-      header('location:homeTemplate.php');
+      header('location:homeFun.php');
   }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,7 +48,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="../../index3.html" class="nav-link">Home</a>
+        <a href="homeFun.php" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">Contact</a>
@@ -192,7 +192,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="projectsFun.php">Funcionários</a></li>
+              <li class="breadcrumb-item"><a href="homeAgencia.php">Home</a></li>
               <li class="breadcrumb-item active">Projects</li>
             </ol>
           </div>
@@ -228,7 +228,7 @@
                           Nome
                       </th>
                       <th style="width: 30%">
-                          Imagem
+                          Setor
                       </th>
                       <th>
                           Username
@@ -242,7 +242,7 @@
               </thead>
               <tbody>
               <?php
-                  $sq="select * from reg";
+                  $sq="select * from funcionario";
                   $qu=mysqli_query($con,$sq);
                   while($f=  mysqli_fetch_assoc($qu)){
                     ?>
@@ -256,11 +256,9 @@
                           </a>
                       </td>
                       <td>
-                          <ul class="list-inline">
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="<?php echo $f['image'];?>">
-                              </li>
-                          </ul>
+                      <a>
+                          <?php echo $f['retypePassword'];?>
+                          </a>
                       </td>
                       <td class="project_progress">
                           
@@ -272,12 +270,12 @@
                           <span class="badge badge-success"><?php echo $f['gender'];?></span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="homeTemplate.php">
+                          <a class="btn btn-primary btn-sm" href="homeFun.php">
                               <i class="fas fa-folder">
                               </i>
                               View
                           </a>
-                          <a class="btn btn-info btn-sm" href="profileTemplate.php">
+                          <a class="btn btn-info btn-sm" href="profileFun.php">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Edit

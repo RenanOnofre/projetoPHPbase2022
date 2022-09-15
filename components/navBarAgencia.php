@@ -10,6 +10,9 @@
       <li class="nav-item d-none d-sm-inline-block">
         <a href="profileAgencia.php" class="nav-link">Profile</a>
       </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="projects.php" class="nav-link">Usuários</a>
+      </li>
     </ul>
 
     <!-- Right navbar links -->
