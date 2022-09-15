@@ -1,6 +1,9 @@
 <?php
     include 'connect.php';
-    $s="select*from reg where id='$_SESSION[id]'";
+
+    $id = $_GET['idReg'];
+
+    $s="select*from reg where id='$id'";
     $qu= mysqli_query($con, $s);
     $f=mysqli_fetch_assoc($qu); 
 
@@ -22,13 +25,12 @@
       header('location:homeTemplate.php');
   }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Projects</title>
+  <title>AdminLTE 3 | Editar</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -179,7 +181,17 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <?php include 'Components/mainSideBarAgencia.php'; ?>
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="../../index3.html" class="brand-link">
+      <img src="AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">AdminLTE 3</span>
+    </a>
+
+    <!-- Sidebar -->
+    <?php include 'Components/mainSideBarAgencia.php'; ?>
+    <!-- /.sidebar -->
+  </aside>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -188,12 +200,12 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Projects</h1>
+            <h1>Alteração de cadastro</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="projectsFun.php">Funcionários</a></li>
-              <li class="breadcrumb-item active">Projects</li>
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Project Edit</li>
             </ol>
           </div>
         </div>
@@ -202,104 +214,58 @@
 
     <!-- Main content -->
     <section class="content">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="card card-primary">
+            <div class="card-header">
+              <h3 class="card-title">Usuário</h3>
 
-      <!-- Default box -->
-      <div class="card">
-        <div class="card-header">
-          <h3 class="card-title">Informações</h3>
-
-          <div class="card-tools">
-            <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-              <i class="fas fa-minus"></i>
-            </button>
-            <button type="button" class="btn btn-tool" data-card-widget="remove" title="Remove">
-              <i class="fas fa-times"></i>
-            </button>
+              <div class="card-tools">
+                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
+                  <i class="fas fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <div class="card-body">
+              <div class="form-group">
+                <label for="inputName">Nome</label>
+                <input type="text" id="inputName" class="form-control" name="text" value="<?php echo $f['name']?>">
+              </div>
+              <div class="form-group">
+                <label for="inputName">Username</label>
+                <input type="text" id="inputName" class="form-control" name="user" value="<?php echo $f['username']?>">
+              </div>
+              <div class="form-group">
+                <label for="inputDescription">Gênero</label>
+                <input type="text" id="inputName" class="form-control" name="gen" value="<?php echo $f['gender']?>">
+              </div>
+              <div class="form-group">
+                <label for="inputDescription">Cidade</label>
+                <input type="text" id="inputName" class="form-control" name="city" value="<?php echo $f['city']?>">
+              </div>
+            </div>
+            <!-- /.card-body -->
           </div>
+          <!-- /.card -->
         </div>
-        <div class="card-body p-0">
-          <table class="table table-striped projects">
-              <thead>
-                  <tr>
-                      <th style="width: 1%">
-                          #
-                      </th>
-                      <th style="width: 20%">
-                          Nome
-                      </th>
-                      <th style="width: 30%">
-                          Imagem
-                      </th>
-                      <th>
-                          Username
-                      </th>
-                      <th style="width: 8%" class="text-center">
-                          Gênero
-                      </th>
-                      <th style="width: 20%">
-                      </th>
-                  </tr>
-              </thead>
-              <tbody>
-              <?php
-                  $sq="select * from reg";
-                  $qu=mysqli_query($con,$sq);
-                  while($f=  mysqli_fetch_assoc($qu)){
-                    ?>
-                  <tr>
-                      <td>
-                          #
-                      </td>
-                      <td>
-                          <a>
-                          <?php echo $f['name'];?>
-                          </a>
-                      </td>
-                      <td>
-                          <ul class="list-inline">
-                              <li class="list-inline-item">
-                                  <img alt="Avatar" class="table-avatar" src="<?php echo $f['image'];?>">
-                              </li>
-                          </ul>
-                      </td>
-                      <td class="project_progress">
-                          
-                              <?php echo $f['username'];?>
-                          
-                        
-                      </td>
-                      <td class="project-state">
-                          <span class="badge badge-success"><?php echo $f['gender'];?></span>
-                      </td>
-                      <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="homeTemplate.php">
-                              <i class="fas fa-folder">
-                              </i>
-                              View
-                          </a>
-                          <a class="btn btn-info btn-sm" href="projectEdit.php?idReg=<?php echo $f['id'];?>">
-                              <i class="fas fa-pencil-alt">
-                              </i>
-                              Edit
-                          </a>
-                          <a class="btn btn-danger btn-sm" href="delete.php">
-                              <i class="fas fa-trash">
-                              </i>
-                              Delete
-                          </a>
-                      </td>
-                  </tr>
-                  <?php
-                  }
-                  ?>
-              </tbody>
-          </table>
+        <!--<div class="col-md-6">
+          <div class="card card-secondary">
+            
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+          
+          <!-- /.card 
         </div>
-        
-        <!-- /.card-body -->
+      </div> -->
+      <div class="row">
+        <div class="col-12">
+          <a href="#" class="btn btn-secondary">Cancel</a>
+          
+          <button type="submit" class="btn btn-danger" name="sub">Alterar</button>
+          
+        </div>
       </div>
-      <!-- /.card -->
-
     </section>
     <!-- /.content -->
   </div>
