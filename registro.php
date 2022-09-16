@@ -31,7 +31,7 @@ if(isset($_POST['sub'])){
   <!-- Theme style -->
   <link rel="stylesheet" href="AdminLTE-3.2.0/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition register-page">
+<body class="hold-transition register-page" background="image/BB.png">
 <div class="register-box">
   <div class="card card-outline card-primary">
     <div class="card-header text-center">

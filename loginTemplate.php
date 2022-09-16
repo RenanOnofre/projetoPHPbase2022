@@ -36,7 +36,7 @@ if(isset($_POST['sub'])){
   <!-- Theme style -->
   <link rel="stylesheet" href="AdminLTE-3.2.0/dist/css/adminlte.min.css">
 </head>
-<body class="hold-transition login-page">
+<body class="hold-transition login-page" background="image/BB.png">
 <div class="login-box">
   <div class="login-logo">
     <a href="../../index2.html"><b>Admin</b>LTE - 3TI</a>
