@@ -38,7 +38,7 @@ if(isset($_POST['sub'])){
 </head>
 <body class="hold-transition login-page" background="image/BB.png">
 <div class="login-box">
-  <div class="login-logo" text='blue'>
+  <div class="login-logo" >
     <a href="../../index2.html"><b>Login </b> Funcionário</a>
   </div>
   <!-- /.login-logo -->
