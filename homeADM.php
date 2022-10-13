@@ -38,18 +38,6 @@
         <!-- Small boxes (Stat box) -->
         <div class="row">
           <div class="col-lg-3 col-6">
-          <?php
-    if($_SESSION['profile']=='2'){
-        echo "
-            <a href='relacao.php'>ver relaçao</a>
-            <a href='reg_city.php'>Reg City</a>
-        ";
-    }else{
-        echo "
-            <a href=''>Você não ADM</a>
-        ";
-    }
-?>
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
@@ -628,7 +616,6 @@
     </section>
     <!-- /.content -->
   </div>
-  
 
   <!-- /.content-wrapper -->
   

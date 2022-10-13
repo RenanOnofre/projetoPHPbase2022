@@ -124,9 +124,9 @@
                   <?php
                   $sq="
                   SELECT
-                  A.nome, 
+                  F.nome, 
                   C.name
-                  FROM agencia AS A
+                  FROM agencia AS F
                   CROSS JOIN reg AS C ORDER BY 2";
                   $qu=mysqli_query($con,$sq);
                   while($f=  mysqli_fetch_assoc($qu)){

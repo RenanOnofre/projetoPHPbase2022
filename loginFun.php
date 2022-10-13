@@ -5,13 +5,16 @@ include 'connect.php';
 if(isset($_POST['sub'])){
     $u=$_POST['user'];
     $p=$_POST['pass'];
-    $s= "select * from funcionario where username='$u' and password= '$p'";   
+    $s= "select * from funcionario as f
+    INNER join agencia as a on a.id = f.fk_idFun 
+    where username='$u' and password= '$p'";   
    $qu= mysqli_query($con, $s);
    if(mysqli_num_rows($qu)>0){
       $f= mysqli_fetch_assoc($qu);
       $_SESSION['id']=$f['id'];
+      $_SESSION['profile']=$f['fk_idFun'];
       header ('location:homeFun.php');
-   }
+    }
    else{
        echo 'username or password does not exist';
    }
