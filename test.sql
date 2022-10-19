@@ -43,7 +43,9 @@ CREATE TABLE `reg` (
 --
 
 INSERT INTO `reg` (`name`, `username`, `password`, `city`, `image`, `gender`, `id`) VALUES
-('Bikash', 'bikash', 'bikash', 'lko', 'image/images.png', 'male', 2);
+('Bikash', 'bikash', 'bikash', 'lko', 'image/images.png', 'male', 2),
+('Renan', 'renan', 'renan', 'sumare', 'image/images.png', 'male', 1);
+
 
 --
 -- Índices para tabelas despejadas

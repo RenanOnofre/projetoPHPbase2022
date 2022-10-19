@@ -50,10 +50,8 @@ CREATE TABLE `agencia` (
 --
 
 INSERT INTO `agencia` (`codigo`, `conta`, `agencia`, `digitoVerificador`, `nome`, `Endereco`, `numero`, `complemento`, `bairro`, `cidade`, `uf`, `cep`, `fone`, `id`) VALUES
-(12, 40818, 1234, 96, 'Renan', 'rua rosa banhos teodoro', 84, 'casa', 'angelo tomazin', 'sumarÃ©', 'sp', 13178623, 2147483647, 6),
-(12, 40818, 1234, 96, 'Renan', 'rua rosa banhos teodoro', 84, 'casa', 'angelo tomazin', 'sumarÃ©', 'sp', 13178623, 2147483647, 7),
-(12, 40818, 1234, 96, 'Renan', 'rua rosa banhos teodoro', 84, 'casa', 'angelo tomazin', 'sumarÃ©', 'sp', 13178623, 2147483647, 8),
-(12, 40818, 1234, 96, 'Renan', 'rua rosa banhos teodoro', 84, 'casa', 'angelo tomazin', 'sumarÃ©', 'sp', 13178623, 2147483647, 9);
+(12, 40818, 1234, 96, 'BytesBank', 'Avenida Anchieta ', 185, 'predio comercial', 'Centro', 'Campinas', 'SP', 13015100, 2147483647, 1),
+(12, 40818, 1234, 85, 'Premium Bank', 'Avenida Paulista', 1452, 'predio comercial', '	Centro', 'Sao Paulo', 'SP', 	17560057, 2147483647, 2);
 
 --
 -- Indexes for dumped tables

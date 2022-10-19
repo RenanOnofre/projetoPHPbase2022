@@ -42,7 +42,7 @@
     if($_SESSION['profile']=='2'){
         echo "
             <a href='relacao.php'>ver relaçao</a>
-            <a href='reg_city.php'>Reg City</a>
+            <a href='projects.php'>Reg City</a>
         ";
     }else{
         echo "
