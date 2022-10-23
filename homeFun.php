@@ -19,7 +19,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">Home</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -37,7 +37,7 @@
       <div class="container-fluid">
         <!-- Small boxes (Stat box) -->
         <div class="row">
-          <div class="col-lg-3 col-6">
+          <div class="col-6">
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
@@ -46,10 +46,10 @@
                 
               
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-stats-bars"></i>
               </div>
               <?php
-    if($_SESSION['profile']=='2'){
+    if($_SESSION['profile']=='1'){
         echo "
             <b><a class='small-box-footer' href='relacao.php'>Relacionamento <i class='fas fa-arrow-circle-right'></i></a></b>
         ";
@@ -63,7 +63,7 @@
             </div>
           </div></div>
           <!-- ./col -->
-          <div class="col-lg-3 col-6">
+          <div class="col-6">
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
@@ -72,10 +72,10 @@
                 
               
               <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <i class="ion ion-ios-people"></i>
               </div>
               <?php
-    if($_SESSION['profile']=='2'){
+    if($_SESSION['profile']=='1'){
         echo "
             <b><a class='small-box-footer' href='projects.php'>Usuários <i class='fas fa-arrow-circle-right'></i></a></b>
         ";
@@ -99,10 +99,7 @@
             <!-- Custom tabs (Charts with tabs)-->
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">
-                  <i class="fas fa-chart-pie mr-1"></i>
-                  Sales
-                </h3>
+                <div class="componente cotacao"><h2 class="titulo medium">Cotação</h2><div class="box"><cotacao _nghost-vok-c116=""><table _ngcontent-vok-c116="" class="table light"><thead _ngcontent-vok-c116=""><tr _ngcontent-vok-c116=""><th _ngcontent-vok-c116="" style="width: 30%;">Dólar EUA</th><th _ngcontent-vok-c116="" class="text-right" style="width: 35%;">Compra (R$)</th><th _ngcontent-vok-c116="" class="text-right" style="width: 35%;">Venda (R$)</th></tr></thead><tbody _ngcontent-vok-c116=""><tr _ngcontent-vok-c116=""><td _ngcontent-vok-c116="" class="text-left"><span _ngcontent-vok-c116="">21/10 (PTAX)</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1913</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1919</span><!----></td></tr><tr _ngcontent-vok-c116=""><td _ngcontent-vok-c116="" class="text-left"><span _ngcontent-vok-c116="">21/10-13:00</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1652</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1658</span><!----></td></tr></tbody></table><table _ngcontent-vok-c116="" class="table light"><thead _ngcontent-vok-c116=""><tr _ngcontent-vok-c116=""><th _ngcontent-vok-c116="" style="width: 30%;">Euro</th><th _ngcontent-vok-c116="" class="text-right" style="width: 35%;">Compra (R$)</th><th _ngcontent-vok-c116="" class="text-right" style="width: 35%;">Venda (R$)</th></tr></thead><tbody _ngcontent-vok-c116=""><tr _ngcontent-vok-c116=""><td _ngcontent-vok-c116="" class="text-left"><span _ngcontent-vok-c116="">21/10 (PTAX)</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1160</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1187</span><!----></td></tr><tr _ngcontent-vok-c116=""><td _ngcontent-vok-c116="" class="text-left"><span _ngcontent-vok-c116="">21/10-13:00</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,0903</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,0930</span><!----></td></tr></tbody></table><!----></cotacao></div></div>
                 <div class="card-tools">
                   <ul class="nav nav-pills ml-auto">
                     <li class="nav-item">
