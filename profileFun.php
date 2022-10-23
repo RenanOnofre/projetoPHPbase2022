@@ -159,12 +159,12 @@
                       </div>
                       <div class="form-group row">
                         <div class="offset-sm-2 col-sm-10">
-                          <button type="submit" class="btn btn-danger" name="sub">Alterar</button>
+                          <button type="submit" class="btn btn-warning" name="sub"><i class="fas fa-pen"></i>Alterar</button>
                         </div>
                       </div>
                       <div class="form-group row">
                         <div class="offset-sm-2 col-sm-10">
-                          <button type="submit" class="btn btn-danger" href="delete.php">Deletar</button>
+                          <button type="submit" class="btn btn-danger" href="delete.php"><i class="fas fa-trash-alt"></i>Deletar</button>
                         </div>
                       </div>
                     </form>

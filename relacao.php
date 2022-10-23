@@ -10,7 +10,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Relacionamento</title>
+  <title>Bytes Bank| Relacionamento</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -65,11 +65,8 @@
                   <tbody>
                   <?php
                   $sq="
-                  SELECT
-                  A.nome, 
-                  C.name
-                  FROM agencia AS A
-                  INNER JOIN funcionario AS C ON A.id = C.id";
+                  select * from agencia as a
+                  INNER join funcionario as f on a.id = f.fk_idAgencia";
                   $qu=mysqli_query($con,$sq);
                   while($f=  mysqli_fetch_assoc($qu)){
                     ?>
@@ -79,7 +76,7 @@
                       </td>
                       <td>
                           <a>
-                          <?php echo $f['nome'];?>
+                          <?php echo $f['id'];?>
                           </a>
                       </td>
                       <td>
@@ -109,25 +106,21 @@
           <div class="col-md-6">
             <div class="card">
               <div class="card-header">
-                <h3 class="card-title">Agência x Usuário</h3>
+                <h3 class="card-title">Funcionário x Usuário</h3>
               </div>
               <!-- /.card-header -->
               <div class="card-body">
                 <table class="table table-bordered">
                   <thead>
                     <tr>
-                      <th style="width: 40px">Agência</th>
+                      <th style="width: 40px">Funcionário</th>
                       <th style="width: 40px">Usuário</th>
                     </tr>
                   </thead>
                   <tbody>
                   <?php
                   $sq="
-                  SELECT
-                  F.nome, 
-                  C.name
-                  FROM agencia AS F
-                  CROSS JOIN reg AS C ORDER BY 2";
+                  select f.name as fname, r.name as rname from funcionario as f INNER join reg as r on r.id = f.fk_idFun;";
                   $qu=mysqli_query($con,$sq);
                   while($f=  mysqli_fetch_assoc($qu)){
                     ?>
@@ -135,12 +128,12 @@
                       
                       <td>
                           <a>
-                          <?php echo $f['nome'];?>
+                          <?php echo $f['fname'];?>
                           </a>
                       </td>
                       <td>
                           <a>
-                          <?php echo $f['name'];?>
+                          <?php echo $f['rname'];?>
                           </a>
                       </td>
                   </tr>

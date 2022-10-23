@@ -179,7 +179,7 @@
   <!-- /.navbar -->
 
   <!-- Main Sidebar Container -->
-  <?php include 'Components/mainSideBarAgencia.php'; ?>
+  <?php include 'Components/mainSideBar.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -272,7 +272,7 @@
                           <span class="badge badge-success"><?php echo $f['gender'];?></span>
                       </td>
                       <td class="project-actions text-right">
-                          <a class="btn btn-primary btn-sm" href="homeTemplate.php">
+                          <a class="btn btn-primary btn-sm" href="homeTemplate.php?idReg=<?php echo $f['id'];?>">
                               <i class="fas fa-folder">
                               </i>
                               View

@@ -13,7 +13,21 @@
         <img src="<?php echo $f['image'];?>" class="img-circle elevation-2" alt="User Image"> 
         </div>
         <div class="info">
-          <a class="d-block"><?php echo $f['username'];?></a>
+          <a class="d-block"><?php 
+          $s= "select * from funcionario as f
+          INNER join profile_reg as p on p.idProfile = f.fk_idFun";   
+         $qu= mysqli_query($con, $s);
+         if(mysqli_num_rows($qu)>0){
+            $f= mysqli_fetch_assoc($qu);
+            $_SESSION['id']=$f['id'];
+            $_SESSION['profile']=$f['fk_idFun'];
+            echo $f['name'];
+          }
+         else{
+             echo 'username or password does not exist';
+         }
+         ?>
+          </a>
         </div>
       </div>
 
