@@ -41,14 +41,14 @@
             <!-- small box -->
             <div class="small-box bg-info">
               <div class="inner">
-                <h3>150</h3>
+                <h3>Câmbio</h3>
 
-                <p>New Orders</p>
+                <p>Converta de real para qualquer outra moeda</p>
               </div>
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="#" class="small-box-footer">Converter <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -105,35 +105,57 @@
           <section class="col-lg-7 connectedSortable">
             <!-- Custom tabs (Charts with tabs)-->
             <div class="card">
-              <div class="card-header">
-                <h3 class="card-title">
-                  <i class="fas fa-chart-pie mr-1"></i>
-                  Sales
-                </h3>
-                <div class="card-tools">
-                  <ul class="nav nav-pills ml-auto">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Area</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#sales-chart" data-toggle="tab">Donut</a>
-                    </li>
-                  </ul>
-                </div>
-              </div><!-- /.card-header -->
-              <div class="card-body">
-                <div class="tab-content p-0">
-                  <!-- Morris chart - Sales -->
-                  <div class="chart tab-pane active" id="revenue-chart"
-                       style="position: relative; height: 300px;">
-                      <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
-                   </div>
-                  <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
-                    <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
-                  </div>
-                </div>
-              </div><!-- /.card-body -->
-            </div>
+<div class="card-header">
+<h3 class="card-title">Serviços</h3>
+<div class="card-tools">
+<span class="badge badge-danger">6 services</span>
+<button type="button" class="btn btn-tool" data-card-widget="collapse">
+<i class="fas fa-minus"></i>
+</button>
+<button type="button" class="btn btn-tool" data-card-widget="remove">
+<i class="fas fa-times"></i>
+</button>
+</div>
+</div>
+
+<div class="card-body p-0">
+<ul class="users-list clearfix">
+<li>
+<img src="image/pix.png" alt="User Image">
+<a class="users-list-name" href="#">Pix</a>
+<span class="users-list-date">Rápido e Seguro</span>
+</li>
+<li>
+<img src="image/seguro.png" alt="User Image">
+<a class="users-list-name" href="#">Seguros</a>
+<span class="users-list-date">De todo tipo</span>
+</li>
+<li>
+<img src="image/transacoes.png" alt="User Image">
+<a class="users-list-name" href="#">Transações</a>
+<span class="users-list-date">De confiança</span>
+</li>
+<li>
+<img src="image/emprestimo.png" alt="User Image">
+<a class="users-list-name" href="#">Emprétismos</a>
+<span class="users-list-date">Pra te salvar</span>
+</li>
+<li>
+<img src="image/consorcio.png" alt="User Image">
+<a class="users-list-name" href="#">Consórcios</a>
+<span class="users-list-date">Que ajudam</span>
+</li>
+<li>
+<img src="image/cartao.png" alt="User Image">
+<a class="users-list-name" href="#">Cartões</a>
+<span class="users-list-date">Crédito / Débito</span>
+</li>
+</ul>
+
+</div>
+
+</div>
+
             <!-- /.card -->
 
             <!-- DIRECT CHAT -->
