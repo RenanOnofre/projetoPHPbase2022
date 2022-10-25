@@ -120,7 +120,7 @@
                   <tbody>
                   <?php
                   $sq="
-                  select f.name as fname, r.name as rname from funcionario as f INNER join reg as r on r.id = f.fk_idFun;";
+                  select f.name as fname, r.name as rname from funcionario as f INNER join reg as r on f.id = r.id_FkReg;";
                   $qu=mysqli_query($con,$sq);
                   while($f=  mysqli_fetch_assoc($qu)){
                     ?>
