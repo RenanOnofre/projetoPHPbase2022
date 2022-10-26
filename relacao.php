@@ -1,6 +1,6 @@
 <?php
     include 'connect.php';
-    $s="select*from agencia where id='$_SESSION[id]'";
+    $s="select*from funcionario where id='$_SESSION[id]'";
     $qu= mysqli_query($con, $s);
     $f=mysqli_fetch_assoc($qu);
     
@@ -22,7 +22,7 @@
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
   <!-- Navbar -->
-  <?php include 'Components/headAgencia.php'; ?>
+  <?php include 'Components/headFun.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">

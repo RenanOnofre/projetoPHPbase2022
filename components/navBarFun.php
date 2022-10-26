@@ -8,7 +8,7 @@
         <a href="homeFun.php" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="profileFun.php" class="nav-link">Profile</a>
+        <a href="profileFun.php?id=1" class="nav-link">Profile</a>
       </li>
     </ul>
 
