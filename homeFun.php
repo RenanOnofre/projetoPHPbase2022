@@ -19,7 +19,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Home</h1>
+            <h1 class="m-0">Inicio</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -99,29 +99,68 @@
             <!-- Custom tabs (Charts with tabs)-->
             <div class="card">
               <div class="card-header">
-                <div class="componente cotacao"><h2 class="titulo medium">Cotação</h2><div class="box"><cotacao _nghost-vok-c116=""><table _ngcontent-vok-c116="" class="table light"><thead _ngcontent-vok-c116=""><tr _ngcontent-vok-c116=""><th _ngcontent-vok-c116="" style="width: 30%;">Dólar EUA</th><th _ngcontent-vok-c116="" class="text-right" style="width: 35%;">Compra (R$)</th><th _ngcontent-vok-c116="" class="text-right" style="width: 35%;">Venda (R$)</th></tr></thead><tbody _ngcontent-vok-c116=""><tr _ngcontent-vok-c116=""><td _ngcontent-vok-c116="" class="text-left"><span _ngcontent-vok-c116="">21/10 (PTAX)</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1913</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1919</span><!----></td></tr><tr _ngcontent-vok-c116=""><td _ngcontent-vok-c116="" class="text-left"><span _ngcontent-vok-c116="">21/10-13:00</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1652</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1658</span><!----></td></tr></tbody></table><table _ngcontent-vok-c116="" class="table light"><thead _ngcontent-vok-c116=""><tr _ngcontent-vok-c116=""><th _ngcontent-vok-c116="" style="width: 30%;">Euro</th><th _ngcontent-vok-c116="" class="text-right" style="width: 35%;">Compra (R$)</th><th _ngcontent-vok-c116="" class="text-right" style="width: 35%;">Venda (R$)</th></tr></thead><tbody _ngcontent-vok-c116=""><tr _ngcontent-vok-c116=""><td _ngcontent-vok-c116="" class="text-left"><span _ngcontent-vok-c116="">21/10 (PTAX)</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1160</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,1187</span><!----></td></tr><tr _ngcontent-vok-c116=""><td _ngcontent-vok-c116="" class="text-left"><span _ngcontent-vok-c116="">21/10-13:00</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,0903</span><!----></td><td _ngcontent-vok-c116="" class="text-right"><span _ngcontent-vok-c116="">5,0930</span><!----></td></tr></tbody></table><!----></cotacao></div></div>
-                <div class="card-tools">
-                  <ul class="nav nav-pills ml-auto">
-                    <li class="nav-item">
-                      <a class="nav-link active" href="#revenue-chart" data-toggle="tab">Area</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" href="#sales-chart" data-toggle="tab">Donut</a>
-                    </li>
-                  </ul>
-                </div>
-              </div><!-- /.card-header -->
-              <div class="card-body">
-                <div class="tab-content p-0">
-                  <!-- Morris chart - Sales -->
-                  <div class="chart tab-pane active" id="revenue-chart"
-                       style="position: relative; height: 300px;">
-                      <canvas id="revenue-chart-canvas" height="300" style="height: 300px;"></canvas>
-                   </div>
-                  <div class="chart tab-pane" id="sales-chart" style="position: relative; height: 300px;">
-                    <canvas id="sales-chart-canvas" height="300" style="height: 300px;"></canvas>
-                  </div>
-                </div>
+                <h1> Cotação </h1>
+                <table class="table table-striped projects">
+              <thead>
+                  <tr>
+                      <th style="width: 1%">
+                          #
+                      </th>
+                      <th style="width: 30%">
+                          Nome
+                      </th>
+                      <th style="width: 30%">
+                          valor
+                      </th>
+                      <th style="width: 30%" class="text-center">
+                          Data
+                      </th>
+                      
+                  </tr>
+              </thead>
+              <tbody>
+              <?php include 'cotacao.php' ?>
+                  <tr>
+                      <td>
+                          #
+                      </td>
+                      <td>
+                          <a>
+                          <?php echo $USDBRL->name; ?>
+                          </a>
+                      </td>
+                      
+                      <td class="project_progress">
+                      <?php echo $USDBRL->ask; ?>
+                      </td>
+                      <td class="project-state">
+                          <span class="badge badge-success"><?php echo $USDBRL->create_date; ?></span>
+                      </td>
+                      
+                  </tr>
+                  <tr>
+                      <td>
+                          #
+                      </td>
+                      <td>
+                          <a>
+                          <?php echo $EURBRL->name; ?>
+                          </a>
+                      </td>
+                      
+                      <td class="project_progress">
+                      <?php echo $EURBRL->ask; ?>
+                      </td>
+                      <td class="project-state">
+                          <span class="badge badge-success"><?php echo $EURBRL->create_date; ?></span>
+                      </td>
+                      
+                  </tr>
+                  
+              </tbody>
+          </table>
+                
+              
               </div><!-- /.card-body -->
             </div>
             <!-- /.card -->
@@ -129,13 +168,10 @@
             <!-- DIRECT CHAT -->
             <div class="card direct-chat direct-chat-primary">
               <div class="card-header">
-                <h3 class="card-title">Direct Chat</h3>
+                <h3 class="card-title">Fale conosco</h3>
 
                 <div class="card-tools">
-                  <span title="3 New Messages" class="badge badge-primary">3</span>
-                  <button type="button" class="btn btn-tool" data-card-widget="collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
+                  
                   <button type="button" class="btn btn-tool" title="Contacts" data-widget="chat-pane-toggle">
                     <i class="fas fa-comments"></i>
                   </button>
@@ -151,14 +187,15 @@
                   <!-- Message. Default to the left -->
                   <div class="direct-chat-msg">
                     <div class="direct-chat-infos clearfix">
-                      <span class="direct-chat-name float-left">Alexander Pierce</span>
-                      <span class="direct-chat-timestamp float-right">23 Jan 2:00 pm</span>
+                      <span class="direct-chat-name float-left">Suporte</span>
+                      <span class="direct-chat-timestamp float-right"><?php date_default_timezone_set('America/Sao_Paulo');
+  echo date('d/m/Y \à\s H:i:s');?></span>
                     </div>
                     <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="AdminLTE-3.2.0/dist/img/user1-128x128.jpg" alt="message user image">
+                    <img class="direct-chat-img" src="image/anon.png" alt="message user image">
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
-                      Is this template really for free? That's unbelievable!
+                      O que está acontecendo?
                     </div>
                     <!-- /.direct-chat-text -->
                   </div>
@@ -167,14 +204,16 @@
                   <!-- Message to the right -->
                   <div class="direct-chat-msg right">
                     <div class="direct-chat-infos clearfix">
-                      <span class="direct-chat-name float-right">Sarah Bullock</span>
-                      <span class="direct-chat-timestamp float-left">23 Jan 2:05 pm</span>
+                      <span class="direct-chat-name float-right"><?php echo $f['name'];?></span>
+                      <span class="direct-chat-timestamp float-left"><?php date_default_timezone_set('America/Sao_Paulo');
+  echo date('d/m/Y \à\s H:i:s');?></span>
                     </div>
-                    <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="AdminLTE-3.2.0/dist/img/user3-128x128.jpg" alt="message user image">
+                    <!-- /.direct-chat-infos 
+                    <img alt="message user image" class="direct-chat-img" src="<?php echo $f['image'];?>">-->
+                    <img class="direct-chat-img" src="image/images.png" alt="message user image">
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
-                      You better believe it!
+                      Preciso de ajuda!
                     </div>
                     <!-- /.direct-chat-text -->
                   </div>
@@ -182,34 +221,23 @@
 
                   <!-- Message. Default to the left -->
                   <div class="direct-chat-msg">
-                    <div class="direct-chat-infos clearfix">
-                      <span class="direct-chat-name float-left">Alexander Pierce</span>
-                      <span class="direct-chat-timestamp float-right">23 Jan 5:37 pm</span>
+                  <div class="direct-chat-infos clearfix">
+                      <span class="direct-chat-name float-right"><?php echo $f['name'];?></span>
+                      <span class="direct-chat-timestamp float-left"><?php date_default_timezone_set('America/Sao_Paulo');
+  echo date('d/m/Y \à\s H:i:s');?></span>
                     </div>
                     <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="AdminLTE-3.2.0/dist/img/user1-128x128.jpg" alt="message user image">
+                    <img class="direct-chat-img" src="image/anon.png" alt="message user image">
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
-                      Working with AdminLTE on a great new app! Wanna join?
+                      Ok, pode falar!
                     </div>
                     <!-- /.direct-chat-text -->
                   </div>
                   <!-- /.direct-chat-msg -->
 
                   <!-- Message to the right -->
-                  <div class="direct-chat-msg right">
-                    <div class="direct-chat-infos clearfix">
-                      <span class="direct-chat-name float-right">Sarah Bullock</span>
-                      <span class="direct-chat-timestamp float-left">23 Jan 6:10 pm</span>
-                    </div>
-                    <!-- /.direct-chat-infos -->
-                    <img class="direct-chat-img" src="AdminLTE-3.2.0/dist/img/user3-128x128.jpg" alt="message user image">
-                    <!-- /.direct-chat-img -->
-                    <div class="direct-chat-text">
-                      I would love to.
-                    </div>
-                    <!-- /.direct-chat-text -->
-                  </div>
+                  
                   <!-- /.direct-chat-msg -->
 
                 </div>
