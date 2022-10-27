@@ -468,41 +468,68 @@
               <div class="card-header border-0">
                 <h3 class="card-title">
                   <i class="fas fa-map-marker-alt mr-1"></i>
-                  Visitors
+                  Usuários
                 </h3>
                 <!-- card tools -->
-                <div class="card-tools">
-                  <button type="button" class="btn btn-primary btn-sm daterange" title="Date range">
-                    <i class="far fa-calendar-alt"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary btn-sm" data-card-widget="collapse" title="Collapse">
-                    <i class="fas fa-minus"></i>
-                  </button>
-                </div>
-                <!-- /.card-tools -->
-              </div>
-              <div class="card-body">
-                <div id="world-map" style="height: 250px; width: 100%;"></div>
-              </div>
-              <!-- /.card-body-->
-              <div class="card-footer bg-transparent">
-                <div class="row">
-                  <div class="col-4 text-center">
-                    <div id="sparkline-1"></div>
-                    <div class="text-white">Visitors</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <div id="sparkline-2"></div>
-                    <div class="text-white">Online</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <div id="sparkline-3"></div>
-                    <div class="text-white">Sales</div>
-                  </div>
-                  <!-- ./col -->
-                </div>
+                <table class="table table-striped projects">
+              <thead>
+                  <tr>
+                      <th style="width: 1%">
+                          #
+                      </th>
+                      <th style="width: 20%">
+                          Nome
+                      </th>
+                      <th style="width: 30%">
+                          Imagem
+                      </th>
+                      <th>
+                          Username
+                      </th>
+                      <th style="width: 8%" class="text-center">
+                          Status
+                      </th>
+                      
+                  </tr>
+              </thead>
+              <tbody>
+              <?php
+                  $sq="select * from reg";
+                  $qu=mysqli_query($con,$sq);
+                  while($f=  mysqli_fetch_assoc($qu)){
+                    ?>
+                  <tr>
+                      <td>
+                          #
+                      </td>
+                      <td>
+                          <a>
+                          <?php echo $f['name'];?>
+                          </a>
+                      </td>
+                      <td>
+                          <ul class="list-inline">
+                              <li class="list-inline-item">
+                                  <img alt="Avatar" class="table-avatar" src="<?php echo $f['image'];?>">
+                              </li>
+                          </ul>
+                      </td>
+                      <td class="project_progress">
+                          
+                              <?php echo $f['username'];?>
+                          
+                        
+                      </td>
+                      <td class="project-state">
+                          <span class="badge badge-success">Ativo</span>
+                      </td>
+                      
+                  </tr>
+                  <?php
+                  }
+                  ?>
+              </tbody>
+          </table>
                 <!-- /.row -->
               </div>
             </div>
