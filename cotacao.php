@@ -23,7 +23,8 @@ $EURBRL = $data->EURBRL;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!--<body>
+<body>
+    <!--
     <h1> <?php echo $USDBRL->name; ?> </h1>
 
     <p>Cotação: <?php echo $USDBRL->ask; ?> </p>
@@ -32,6 +33,6 @@ $EURBRL = $data->EURBRL;
     <h1> <?php echo $EURBRL->name; ?> </h1>
 
     <p>Cotação: <?php echo $EURBRL->ask; ?> </p>
-    <p>Data da cotação : <?php echo $USDBRL->create_date; ?> </p>
-</body> -->
+    <p>Data da cotação : <?php echo $USDBRL->create_date; ?> </p>-->
+</body> 
 </html>
