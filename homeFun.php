@@ -51,11 +51,11 @@
               <?php
     if($_SESSION['profile']=='1'){
         echo "
-            <b><a class='small-box-footer' href='relacao.php'>Relacionamento <i class='fas fa-arrow-circle-right'></i></a></b>
+            <b><h5><a class='small-box-footer' href='relacao.php'>Relacionamento <i class='fas fa-arrow-circle-right'></i></a></h5></b>
         ";
     }else{
         echo "
-            <a href=''>Você não ADM</a>
+            <h1>Você não ADM</h1>
         ";
     }
 ?>
@@ -77,11 +77,11 @@
               <?php
     if($_SESSION['profile']=='1'){
         echo "
-            <b><a class='small-box-footer' href='projects.php'>Usuários <i class='fas fa-arrow-circle-right'></i></a></b>
+            <b><h5><a class='small-box-footer' href='projects.php'>Usuários <i class='fas fa-arrow-circle-right'></i></a></h5></b>
         ";
     }else{
         echo "
-            <a href=''>Você não ADM</a>
+            <h1>Você não ADM</h1>
         ";
     }
 ?>
@@ -195,7 +195,7 @@
                     <img class="direct-chat-img" src="image/anon.png" alt="message user image">
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
-                      O que está acontecendo?
+                      Olá
                     </div>
                     <!-- /.direct-chat-text -->
                   </div>
@@ -221,17 +221,30 @@
 
                   <!-- Message. Default to the left -->
                   <div class="direct-chat-msg">
-                  <div class="direct-chat-infos clearfix">
-                      <span class="direct-chat-name float-right"><?php echo $f['name'];?></span>
-                      <span class="direct-chat-timestamp float-left"><?php date_default_timezone_set('America/Sao_Paulo');
+                    <div class="direct-chat-infos clearfix">
+                      <span class="direct-chat-name float-left">Suporte</span>
+                      <span class="direct-chat-timestamp float-right"><?php date_default_timezone_set('America/Sao_Paulo');
   echo date('d/m/Y \à\s H:i:s');?></span>
                     </div>
                     <!-- /.direct-chat-infos -->
                     <img class="direct-chat-img" src="image/anon.png" alt="message user image">
                     <!-- /.direct-chat-img -->
                     <div class="direct-chat-text">
-                      Ok, pode falar!
+                      O que está acontecendo?
                     </div>
+                    <div class="direct-chat-msg">
+                    <div class="direct-chat-infos clearfix">
+                      <span class="direct-chat-name float-left">Suporte</span>
+                      <span class="direct-chat-timestamp float-right"><?php date_default_timezone_set('America/Sao_Paulo');
+  echo date('d/m/Y \à\s H:i:s');?></span>
+                    </div>
+                    <!-- /.direct-chat-infos -->
+                    <img class="direct-chat-img" src="image/anon.png" alt="message user image">
+                    <!-- /.direct-chat-img -->
+                    <div class="direct-chat-text" id="ultima">
+                      Mande e entraremos em contato assim que estiver disponível!
+                    </div>
+                    
                     <!-- /.direct-chat-text -->
                   </div>
                   <!-- /.direct-chat-msg -->
@@ -247,94 +260,22 @@
                 <div class="direct-chat-contacts">
                   <ul class="contacts-list">
                     <li>
-                      <a href="#">
-                        <img class="contacts-list-img" src="AdminLTE-3.2.0/dist/img/user1-128x128.jpg" alt="User Avatar">
+                      <a href="homeFun.php">
+                        <img class="contacts-list-img" src="image/anon.png" alt="User Avatar">
 
                         <div class="contacts-list-info">
                           <span class="contacts-list-name">
-                            Count Dracula
-                            <small class="contacts-list-date float-right">2/28/2015</small>
+                            Suporte
+                            <small class="contacts-list-date float-right"><?php date_default_timezone_set('America/Sao_Paulo');
+  echo date('d/m/Y \à\s H:i:s');?></small>
                           </span>
-                          <span class="contacts-list-msg">How have you been? I was...</span>
+                          <span class="contacts-list-msg">Mande e entraremos em contato assim que estiver disponível!</span>
                         </div>
                         <!-- /.contacts-list-info -->
                       </a>
                     </li>
                     <!-- End Contact Item -->
-                    <li>
-                      <a href="#">
-                        <img class="contacts-list-img" src="AdminLTE-3.2.0/dist/img/user7-128x128.jpg" alt="User Avatar">
-
-                        <div class="contacts-list-info">
-                          <span class="contacts-list-name">
-                            Sarah Doe
-                            <small class="contacts-list-date float-right">2/23/2015</small>
-                          </span>
-                          <span class="contacts-list-msg">I will be waiting for...</span>
-                        </div>
-                        <!-- /.contacts-list-info -->
-                      </a>
-                    </li>
-                    <!-- End Contact Item -->
-                    <li>
-                      <a href="#">
-                        <img class="contacts-list-img" src="AdminLTE-3.2.0/dist/img/user3-128x128.jpg" alt="User Avatar">
-
-                        <div class="contacts-list-info">
-                          <span class="contacts-list-name">
-                            Nadia Jolie
-                            <small class="contacts-list-date float-right">2/20/2015</small>
-                          </span>
-                          <span class="contacts-list-msg">I'll call you back at...</span>
-                        </div>
-                        <!-- /.contacts-list-info -->
-                      </a>
-                    </li>
-                    <!-- End Contact Item -->
-                    <li>
-                      <a href="#">
-                        <img class="contacts-list-img" src="AdminLTE-3.2.0/dist/img/user5-128x128.jpg" alt="User Avatar">
-
-                        <div class="contacts-list-info">
-                          <span class="contacts-list-name">
-                            Nora S. Vans
-                            <small class="contacts-list-date float-right">2/10/2015</small>
-                          </span>
-                          <span class="contacts-list-msg">Where is your new...</span>
-                        </div>
-                        <!-- /.contacts-list-info -->
-                      </a>
-                    </li>
-                    <!-- End Contact Item -->
-                    <li>
-                      <a href="#">
-                        <img class="contacts-list-img" src="AdminLTE-3.2.0/dist/img/user6-128x128.jpg" alt="User Avatar">
-
-                        <div class="contacts-list-info">
-                          <span class="contacts-list-name">
-                            John K.
-                            <small class="contacts-list-date float-right">1/27/2015</small>
-                          </span>
-                          <span class="contacts-list-msg">Can I take a look at...</span>
-                        </div>
-                        <!-- /.contacts-list-info -->
-                      </a>
-                    </li>
-                    <!-- End Contact Item -->
-                    <li>
-                      <a href="#">
-                        <img class="contacts-list-img" src="AdminLTE-3.2.0/dist/img/user8-128x128.jpg" alt="User Avatar">
-
-                        <div class="contacts-list-info">
-                          <span class="contacts-list-name">
-                            Kenneth M.
-                            <small class="contacts-list-date float-right">1/4/2015</small>
-                          </span>
-                          <span class="contacts-list-msg">Never mind I found...</span>
-                        </div>
-                        <!-- /.contacts-list-info -->
-                      </a>
-                    </li>
+                    
                     <!-- End Contact Item -->
                   </ul>
                   <!-- /.contacts-list -->
@@ -361,16 +302,12 @@
               <div class="card-header">
                 <h3 class="card-title">
                   <i class="ion ion-clipboard mr-1"></i>
-                  To Do List
+                  Tarefas
                 </h3>
 
                 <div class="card-tools">
                   <ul class="pagination pagination-sm">
-                    <li class="page-item"><a href="#" class="page-link">&laquo;</a></li>
-                    <li class="page-item"><a href="#" class="page-link">1</a></li>
-                    <li class="page-item"><a href="#" class="page-link">2</a></li>
-                    <li class="page-item"><a href="#" class="page-link">3</a></li>
-                    <li class="page-item"><a href="#" class="page-link">&raquo;</a></li>
+                    <li class="page-item"><a href="homeFun.php" class="page-link">1</a></li>
                   </ul>
                 </div>
               </div>
@@ -389,9 +326,9 @@
                       <label for="todoCheck1"></label>
                     </div>
                     <!-- todo text -->
-                    <span class="text">Design a nice theme</span>
+                    <span class="text">Atualização do perfeil Alciomar Holanda</span>
                     <!-- Emphasis label -->
-                    <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
+                    <small class="badge badge-danger"><i class="far fa-clock"></i> Pendente</small>
                     <!-- General tools such as edit or delete-->
                     <div class="tools">
                       <i class="fas fa-edit"></i>
@@ -406,9 +343,10 @@
                     <div  class="icheck-primary d-inline ml-2">
                       <input type="checkbox" value="" name="todo2" id="todoCheck2" checked>
                       <label for="todoCheck2"></label>
+                      
                     </div>
-                    <span class="text">Make the theme responsive</span>
-                    <small class="badge badge-info"><i class="far fa-clock"></i> 4 hours</small>
+                    <span class="text">Enviar extrato Mensal para Isabella Casciatori</span>
+                    <small class="badge badge-success"><i class="far fa-clock"></i> Realizado</small>
                     <div class="tools">
                       <i class="fas fa-edit"></i>
                       <i class="fas fa-trash-o"></i>
@@ -423,15 +361,15 @@
                       <input type="checkbox" value="" name="todo3" id="todoCheck3">
                       <label for="todoCheck3"></label>
                     </div>
-                    <span class="text">Let theme shine like a star</span>
-                    <small class="badge badge-warning"><i class="far fa-clock"></i> 1 day</small>
+                    <span class="text">Verificar notificações</span>
+                    <small class="badge badge-warning"><i class="far fa-clock"></i> 1 dia</small>
                     <div class="tools">
                       <i class="fas fa-edit"></i>
                       <i class="fas fa-trash-o"></i>
                     </div>
                   </li>
-                  <li>
-                    <span class="handle">
+                  <!--<li>
+                    <--<span class="handle">
                       <i class="fas fa-ellipsis-v"></i>
                       <i class="fas fa-ellipsis-v"></i>
                     </span>
@@ -439,13 +377,13 @@
                       <input type="checkbox" value="" name="todo4" id="todoCheck4">
                       <label for="todoCheck4"></label>
                     </div>
-                    <span class="text">Let theme shine like a star</span>
+                    <span class="text"></span>
                     <small class="badge badge-success"><i class="far fa-clock"></i> 3 days</small>
                     <div class="tools">
                       <i class="fas fa-edit"></i>
                       <i class="fas fa-trash-o"></i>
                     </div>
-                  </li>
+                  </li> -->
                   <li>
                     <span class="handle">
                       <i class="fas fa-ellipsis-v"></i>
@@ -455,8 +393,8 @@
                       <input type="checkbox" value="" name="todo5" id="todoCheck5">
                       <label for="todoCheck5"></label>
                     </div>
-                    <span class="text">Check your messages and notifications</span>
-                    <small class="badge badge-primary"><i class="far fa-clock"></i> 1 week</small>
+                    <span class="text">Enviar relatório semanal</span>
+                    <small class="badge badge-primary"><i class="far fa-clock"></i> 1 Semana</small>
                     <div class="tools">
                       <i class="fas fa-edit"></i>
                       <i class="fas fa-trash-o"></i>
@@ -471,8 +409,8 @@
                       <input type="checkbox" value="" name="todo6" id="todoCheck6">
                       <label for="todoCheck6"></label>
                     </div>
-                    <span class="text">Let theme shine like a star</span>
-                    <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 month</small>
+                    <span class="text">Analisar os perfis dos usuários</span>
+                    <small class="badge badge-secondary"><i class="far fa-clock"></i> 1 mês</small>
                     <div class="tools">
                       <i class="fas fa-edit"></i>
                       <i class="fas fa-trash-o"></i>
@@ -482,7 +420,7 @@
               </div>
               <!-- /.card-body -->
               <div class="card-footer clearfix">
-                <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> Add item</button>
+                <button type="button" class="btn btn-primary float-right"><i class="fas fa-plus"></i> adicionar item</button>
               </div>
             </div>
             <!-- /.card -->
@@ -568,7 +506,7 @@
               <div class="card-header border-0">
                 <h3 class="card-title">
                   <i class="fas fa-th mr-1"></i>
-                  Sales Graph
+                  Gráficos
                 </h3>
 
                 <div class="card-tools">

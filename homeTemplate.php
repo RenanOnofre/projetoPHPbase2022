@@ -49,7 +49,7 @@
               <div class="icon">
                 <i class="ion ion-bag"></i>
               </div>
-              <a href="#" class="small-box-footer">Converter <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="alg001.php" class="small-box-footer">Converter <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
