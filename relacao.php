@@ -54,10 +54,9 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table class="table table-bordered">
+                <table class="table table-bordered table table-hover table-dark">
                   <thead>
                     <tr>
-                      <th style="width: 10px">#</th>
                       <th style="width: 40px">Agência</th>
                       <th style="width: 40px">Funcionário</th>
                     </tr>
@@ -71,9 +70,7 @@
                   while($f=  mysqli_fetch_assoc($qu)){
                     ?>
                   <tr>
-                      <td>
-                          #
-                      </td>
+                      
                       <td>
                           <a>
                           <?php echo $f['id'];?>
@@ -110,7 +107,7 @@
               </div>
               <!-- /.card-header -->
               <div class="card-body">
-                <table class="table table-bordered">
+                <table class="table table-bordered table-hover table-dark">
                   <thead>
                     <tr>
                       <th style="width: 40px">Funcionário</th>

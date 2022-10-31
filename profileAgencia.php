@@ -100,7 +100,7 @@
                 </ul>
               </div><!-- /.card-header -->
               <div class="card-body">
-                <div class="tab-content">
+                
                   
 
                   <div class="tab-pane" id="settings">
@@ -201,7 +201,7 @@
                   <!-- /.tab-pane -->
                 </div>
                 <!-- /.tab-content -->
-              </div><!-- /.card-body -->
+              
             </div>
             <!-- /.card -->
           </div>
