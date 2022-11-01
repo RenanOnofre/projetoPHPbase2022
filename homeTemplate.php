@@ -14,7 +14,7 @@
 
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background: linear-gradient(50deg, #f3c680, #a1e3e2);">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -44,12 +44,12 @@
               <div class="inner">
                 <h3>Câmbio</h3>
 
-                <p>Converta de real para qualquer outra moeda</p>
+                <p>Conversão para Dolar/Euro</p>
               </div>
               <div class="icon">
-                <i class="ion ion-bag"></i>
+                <i class="ion ion-cash"></i>
               </div>
-              <a href="alg001.php" class="small-box-footer">Converter <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="conversor-de-moeda/dist/index.php" class="small-box-footer">Converter <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -57,12 +57,12 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>Cadastrar Cartões</h3>
+                <h3>Cartões</h3>
 
                 <p>Cadastrar seus cartões</p>
               </div>
               <div class="icon">
-                <i class="ion ion-stats-bars"></i>
+                <i class="ion ion-card"></i>
               </div>
               <a href="daily-ui-002-credit-card-checkout/dist/index.php" class="small-box-footer">Cadastrar <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -77,7 +77,7 @@
                 <p>Realizar pagamento de boletos</p>
               </div>
               <div class="icon">
-                <i class="ion ion-person-add"></i>
+                <i class="ion ion-ios-barcode-outline"></i>
               </div>
               <a href="#" class="small-box-footer">Pagar <i class="fas fa-arrow-circle-right"></i></a>
             </div>
@@ -89,10 +89,10 @@
               <div class="inner">
                 <h3>Transferência</h3>
 
-                <p>Realizar transferência para outras contas</p>
+                <p>Realizar transferências</p>
               </div>
               <div class="icon">
-                <i class="ion ion-pie-graph"></i>
+                <i class="ion ion-checkmark-circled"></i>
               </div>
               <a href="#" class="small-box-footer">Transferir <i class="fas fa-arrow-circle-right"></i></a>
             </div>

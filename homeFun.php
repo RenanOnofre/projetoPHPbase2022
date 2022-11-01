@@ -9,11 +9,34 @@
 
 
   <!-- Preloader -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
 
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Usuários', 'Renan Onofre', 'Heloisa Gomes'],
+          ['Ativos', 2, 2]
+          
+        ]);
+
+        var options = {
+          chart: {
+            title: 'Usuários Cadastrados',
+            subtitle: 'usuários por funcionários',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
 
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background: linear-gradient(50deg, #f3c680, #a1e3e2);">
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -296,7 +319,8 @@
               <!-- /.card-footer-->
             </div>
             <!--/.direct-chat -->
-
+  </div>
+  <div>
             <!-- TO DO List -->
             <div class="card">
               <div class="card-header">
@@ -518,36 +542,11 @@
                   </button>
                 </div>
               </div>
-              <div class="card-body">
-                <canvas class="chart" id="line-chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+              <div class="card-body" style="widht: 100%">
+              <div id="columnchart_material" style="width:100%; min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></div>
               </div>
               <!-- /.card-body -->
-              <div class="card-footer bg-transparent">
-                <div class="row">
-                  <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60"
-                           data-fgColor="#39CCCC">
-
-                    <div class="text-white">Mail-Orders</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60"
-                           data-fgColor="#39CCCC">
-
-                    <div class="text-white">Online</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60"
-                           data-fgColor="#39CCCC">
-
-                    <div class="text-white">In-Store</div>
-                  </div>
-                  <!-- ./col -->
-                </div>
-                <!-- /.row -->
-              </div>
+              
               <!-- /.card-footer -->
             </div>
             <!-- /.card -->

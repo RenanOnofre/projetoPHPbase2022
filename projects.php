@@ -48,13 +48,13 @@
   <?php include 'Components/mainSideBar.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background: linear-gradient(50deg, #f3c680, #a1e3e2);">
     <!-- Content Header (Page header) -->
-    <section class="content-header">
+    <section class="content-header" >
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Projects</h1>
+            <h1>Usuários Cadastrados</h1>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -84,9 +84,9 @@
           </div>
         </div>
         <div class="card-body p-0">
-          <table class="table table-striped projects">
+          <table class="table table-striped projects table-hover">
               <thead>
-                  <tr>
+                  <tr class="bg-primary">
                       <th style="width: 1%">
                           #
                       </th>
@@ -112,7 +112,7 @@
                   $qu=mysqli_query($con,$sq);
                   while($f=  mysqli_fetch_assoc($qu)){
                     ?>
-                  <tr>
+                  <tr >
                       <td>
                           #
                       </td>

@@ -25,7 +25,7 @@
   <?php include 'Components/headFun.php'; ?>
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background: linear-gradient(50deg, #f3c680, #a1e3e2);">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -35,7 +35,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="homeFun.php">Home</a></li>
               <li class="breadcrumb-item active">Relações</li>
             </ol>
           </div>
@@ -45,7 +45,7 @@
 
     <!-- Main content -->
     <section class="content">
-      <div class="container-fluid">
+      <div class="container-fluid" style="text-align:center; ">
         <div class="row">
           <div class="col-md-6">
             <div class="card">
