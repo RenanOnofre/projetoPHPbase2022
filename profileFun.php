@@ -30,7 +30,7 @@
 
 
   <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  <div class="content-wrapper" style="background: linear-gradient(50deg, #f3c680, #a1e3e2);">
     <!-- Content Header (Page header) -->
     <section class="content-header">
       <div class="container-fluid">
@@ -41,7 +41,7 @@
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="homeFun.php">Home</a></li>
-              <li class="breadcrumb-item active">User Profile</li>
+              <li class="breadcrumb-item active">Perfil</li>
             </ol>
           </div>
         </div>
@@ -95,7 +95,7 @@
               <div class="card-header p-2">
                 <ul class="nav nav-pills">
                   
-                  <li class="nav-item"><a class="nav-link" href="#settings" data-toggle="tab">Settings</a></li>
+                  <li class="nav-item"><a class="nav-link" href="#" data-toggle="tab">Dados</a></li>
                 </ul>
               </div><!-- /.card-header -->
               <div class="card-body">
@@ -107,7 +107,7 @@
                   <div class="tab-pane" id="settings">
                     <form class="form-horizontal" method="POST">
                       <div class="form-group row">
-                        <label for="inputName" class="col-sm-2 col-form-label">Name</label>
+                        <label for="inputName" class="col-sm-2 col-form-label">Nome</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" id="inputName" placeholder="Name" name="text" value="<?php echo $f['name']?>">
                         </div>
@@ -131,19 +131,19 @@
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="inputCity" class="col-sm-2 col-form-label">City</label>
+                        <label for="inputCity" class="col-sm-2 col-form-label">Cidade</label>
                         <div class="col-sm-10">
                         <input type="text" class="form-control" id="inputCity" placeholder="City" name="city" value="<?php echo $f['city']?>">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="inputGender" class="col-sm-2 col-form-label">Gender</label>
+                        <label for="inputGender" class="col-sm-2 col-form-label">Gênero</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" id="inputGender" placeholder="gender" name="gen" value="<?php echo $f['gender']?>">
                         </div>
                       </div>
                       <div class="form-group row">
-                        <label for="inputPass" class="col-sm-2 col-form-label">Password</label>
+                        <label for="inputPass" class="col-sm-2 col-form-label">Senha</label>
                         <div class="col-sm-10">
                           <input type="text" class="form-control" id="inputPass" placeholder="Password" name="pass" value="<?php echo $f['password']?>">
                         </div>
@@ -152,7 +152,7 @@
                         <div class="offset-sm-2 col-sm-10">
                           <div class="checkbox">
                             <label>
-                              <input type="checkbox"> I agree to the <a href="#">terms and conditions</a>
+                              <input type="checkbox"> Eu concordo com os <a href="#"> termos e condições</a>
                             </label>
                           </div>
                         </div>
@@ -160,10 +160,7 @@
                       <div class="form-group row">
                         <div class="offset-sm-2 col-sm-10">
                           <button type="submit" class="btn btn-warning" name="sub"><i class="fas fa-pen"></i>Alterar</button>
-                        </div>
-                      </div>
-                      <div class="form-group row">
-                        <div class="offset-sm-2 col-sm-10">
+                        
                           <button type="submit" class="btn btn-danger" href="delete.php"><i class="fas fa-trash-alt"></i>Deletar</button>
                         </div>
                       </div>

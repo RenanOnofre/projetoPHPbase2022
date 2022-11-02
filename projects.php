@@ -86,7 +86,7 @@
         <div class="card-body p-0">
           <table class="table table-striped projects table-hover">
               <thead>
-                  <tr class="bg-primary">
+                  <tr class="bg-info">
                       <th style="width: 1%">
                           #
                       </th>
@@ -155,8 +155,13 @@
                   ?>
               </tbody>
           </table>
+          
         </div>
-        
+        <a class="btn btn-primary float-right" href="registroUser.php">
+                              <i class="fas fa-plus">
+                              </i>
+                              Adicionar
+                          </a>
         <!-- /.card-body -->
       </div>
       <!-- /.card -->

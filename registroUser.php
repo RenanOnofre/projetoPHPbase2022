@@ -94,7 +94,7 @@ if(isset($_POST['sub'])){
             <div class="icheck-primary">
               <input type="checkbox" id="agreeTerms" name="terms" value="agree">
               <label for="agreeTerms">
-               I agree to the <a href="#">terms</a>
+               Estou de acordo com os <a href="#">termos</a>
               </label>
             </div>
           </div>
@@ -107,14 +107,7 @@ if(isset($_POST['sub'])){
       </form>
 
       <div class="social-auth-links text-center">
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i>
-          Entrar Usando Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i>
-          Entrar usando Google+
-        </a>
+        
       </div>
 
       <a href="loginTemplate.php" class="text-center">Eu já sou um Usuário</a>

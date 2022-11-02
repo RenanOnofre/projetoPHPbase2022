@@ -42,7 +42,7 @@ if(isset($_POST['sub'])){
 <body class="hold-transition login-page" background="image/BB.png">
 <div class="login-box">
   <div class="login-logo" style="background-color: white">
-    <h1><b>Login </b> Funcionário</h1>
+    <b>Login </b> Funcionário
   </div>
   <!-- /.login-logo -->
   <div class="card">
@@ -84,19 +84,12 @@ if(isset($_POST['sub'])){
       </form>
 
       <div class="social-auth-links text-center mb-3">
-        <p>- OR -</p>
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Entrar usando Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Entrar usando Google+
-        </a>
+        <p>- OU -</p>
+      
       </div>
       <!-- /.social-auth-links -->
 
-      <p class="mb-1">
-        <a href="forgot-password.html">Esqueci minha Senha</a>
-      </p>
+      
       <p class="mb-0">
         <a href="registro.php" class="text-center">Registrar novo Funcionário</a>
       </p>

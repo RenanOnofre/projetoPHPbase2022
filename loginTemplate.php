@@ -38,17 +38,17 @@ if(isset($_POST['sub'])){
 </head>
 <body class="hold-transition login-page" background="image/BB.png">
 <div class="login-box">
-  <div class="login-logo">
-    <a href="../../index2.html"><b>Admin</b>LTE - 3TI</a>
+<div class="login-logo" style="background-color: white">
+    <b>Login</b> Cliente 
   </div>
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      <p class="login-box-msg">Sign in to start your session</p>
+      <p class="login-box-msg">Entre para iniciar sua sessão!</p>
 
       <form method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="Email" name="user">
+          <input type="text" class="form-control" placeholder="Username" name="user">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-envelope"></span>
@@ -81,13 +81,8 @@ if(isset($_POST['sub'])){
       </form>
 
       <div class="social-auth-links text-center mb-3">
-        <p>- OR -</p>
-        <a href="#" class="btn btn-block btn-primary">
-          <i class="fab fa-facebook mr-2"></i> Sign in using Facebook
-        </a>
-        <a href="#" class="btn btn-block btn-danger">
-          <i class="fab fa-google-plus mr-2"></i> Sign in using Google+
-        </a>
+        <p>- OU -</p>
+        
       </div>
       <!-- /.social-auth-links -->
 

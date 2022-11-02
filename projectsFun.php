@@ -58,7 +58,7 @@
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="homeAgencia.php">Home</a></li>
+              <li class="breadcrumb-item"><a href="homeFun.php">Home</a></li>
               <li class="breadcrumb-item active">Projects</li>
             </ol>
           </div>
@@ -86,7 +86,7 @@
         <div class="card-body p-0">
           <table class="table table-striped projects table-hover">
               <thead>
-                  <tr class="bg-primary">
+                  <tr class="bg-info">
                       <th style="width: 1%">
                           #
                       </th>
@@ -137,12 +137,12 @@
                       </td>
                       <td class="project-actions text-right">
                           
-                          <a class="btn btn-info btn-sm" href="profileFun.php">
+                          <a class="btn btn-info btn-sm" href="projectEditFun.php?idFun=<?php echo $f['id'];?>">
                               <i class="fas fa-pencil-alt">
                               </i>
                               Editar
                           </a>
-                          <a class="btn btn-danger btn-sm" href="delete.php">
+                          <a class="btn btn-danger btn-sm" href="delete.php?id=<?php echo $f['id'];?>">
                               <i class="fas fa-trash">
                               </i>
                               Deletar
@@ -155,7 +155,11 @@
               </tbody>
           </table>
         </div>
-        
+        <a class="btn btn-primary float-right" href="registro.php">
+                              <i class="fas fa-plus">
+                              </i>
+                              Adicionar
+                          </a>
         <!-- /.card-body -->
       </div>
       <!-- /.card -->

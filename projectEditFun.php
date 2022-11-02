@@ -1,15 +1,16 @@
 <?php
     include 'connect.php';
 
-    $id = $_GET['idReg'];
+    $idF = $_GET['idFun'];
 
-    $s="select*from reg where id='$id'";
+    $s="select*from funcionario where id='$idF'";
     $qu= mysqli_query($con, $s);
     $f=mysqli_fetch_assoc($qu); 
 
     if(isset($_POST['sub'])){
       $t=$_POST['text'];
       $u=$_POST['user'];
+      $r=$_POST['setor'];
       $c=$_POST['city'];
       $g=$_POST['gen'];
       /*if($_FILES['f1']['name']){
@@ -19,7 +20,7 @@
       else{
           $img=$_POST['img1'];
       } ,image='$img'*/
-      $i="update reg set name='$t',username='$u',city='$c',gender='$g' where id='$id'";
+      $i="update funcionario set name='$t',username='$u',retypePassword='$r', city='$c',gender='$g' where id='$idF'";
       mysqli_query($con, $i);
       header('location:homeFun.php');
   }
@@ -29,7 +30,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Editar</title>
+  <title>Alterar Funcionário</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -40,7 +41,7 @@
 </head>
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
-<div class="wrapper" >
+<div class="wrapper">
   <!-- Navbar -->
   <?php include 'components/headFun.php' ?>
   <!-- /.navbar -->
@@ -49,8 +50,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="../../index3.html" class="brand-link">
-      <img src="image/BB.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <img src="AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">Funcionário</span>
     </a>
 
     <!-- Sidebar -->
@@ -84,7 +85,7 @@
         <div class="col-md-6">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Usuário</h3>
+              <h3 class="card-title">Funcionário</h3>
 
               <div class="card-tools">
                 <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
@@ -100,6 +101,10 @@
               <div class="form-group">
                 <label for="inputName">Username</label>
                 <input type="text" id="inputName" class="form-control" name="user" value="<?php echo $f['username']?>">
+              </div>
+              <div class="form-group">
+                <label for="inputName">Setor</label>
+                <input type="text" id="inputName" class="form-control" name="setor" value="<?php echo $f['retypePassword']?>">
               </div>
               <div class="form-group">
                 <label for="inputDescription">Gênero</label>
@@ -126,7 +131,7 @@
       </div> -->
       <div class="row">
         <div class="col-12">
-          <a href="projects.php" class="btn btn-secondary">Cancel</a>         
+          <a href="projectsFun.php" class="btn btn-secondary">Cancel</a>         
           <button type="submit" class="btn btn-warning" name="sub"><i class="fas fa-pen"></i>Alterar</button>                   
           
         </div>

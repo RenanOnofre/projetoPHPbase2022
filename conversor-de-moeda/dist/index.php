@@ -10,7 +10,7 @@
 <!-- partial:index.partial.html -->
 <body>
 	<main>
-<h1>Conversor de Moeda</h1>
+<h1>Conversor de Moeda</h1> 
 	<div id="conversor">
 		<input type="number" id="input" placeholder="Real">
 		<br>

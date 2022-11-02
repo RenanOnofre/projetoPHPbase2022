@@ -8,7 +8,7 @@
         <a href="homeAgencia.php" class="nav-link">Home</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="profileAgencia.php" class="nav-link">Profile</a>
+        <a href="profileAgencia.php" class="nav-link">Perfil</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="projects.php" class="nav-link">Usuários</a>
