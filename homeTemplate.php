@@ -87,14 +87,14 @@
             <!-- small box -->
             <div class="small-box bg-danger">
               <div class="inner">
-                <h3>Transferência</h3>
+                <h3>Status</h3>
 
-                <p>Realizar transferências</p>
+                <p>Status Bancário</p>
               </div>
               <div class="icon">
                 <i class="ion ion-checkmark-circled"></i>
               </div>
-              <a href="#" class="small-box-footer">Transferir <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="suitbankinicio/dist/index.php" class="small-box-footer">Verificar <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
@@ -151,6 +151,11 @@
 <a class="users-list-name" href="#">Cartões</a>
 <span class="users-list-date">Crédito / Débito</span>
 </li>
+<li>
+<img src="image/anon.png" alt="User Image">
+<a class="users-list-name" href="mensagem/dist/index.php">Chat</a>
+<span class="users-list-date">Assistente Virtual</span>
+</li>
 </ul>
 
 </div>
@@ -162,7 +167,7 @@
             <!-- DIRECT CHAT -->
             <div class="card direct-chat direct-chat-primary">
               <div class="card-header">
-                <h3 class="card-title">Direct Chat</h3>
+                <h3 class="card-title">Chat - Help</h3>
 
                 <div class="card-tools">
                   <span title="3 New Messages" class="badge badge-primary">3</span>
@@ -559,7 +564,7 @@
                 </div>
               </div>
               <div class="card-body">
-                <canvas class="chart" id="line-chart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                <?php include 'line/dist/index.html' ?>
               </div>
               <!-- /.card-body -->
               <div class="card-footer bg-transparent">

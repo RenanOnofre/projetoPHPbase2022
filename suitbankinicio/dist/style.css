@@ -1,0 +1,239 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+html, body, .routes-container {
+  min-height: 100vh;
+}
+html body, body body, .routes-container body {
+  margin: 0;
+}
+html body .routes-container, body body .routes-container, .routes-container body .routes-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Open Sans";
+  background: whitesmoke;
+}
+html body .routes-container .switch-container, body body .routes-container .switch-container, .routes-container body .routes-container .switch-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  border-radius: 14px;
+  margin: 28px;
+  overflow: hidden;
+}
+html body .routes-container .switch-container .switch-highlighter, body body .routes-container .switch-container .switch-highlighter, .routes-container body .routes-container .switch-container .switch-highlighter {
+  position: absolute;
+  background: #50a6c2;
+  width: 50%;
+  height: 100%;
+  border-radius: 14px;
+  transform: translateX(0);
+  transition: transform 0.8s;
+}
+html body .routes-container .switch-container [class^=switch-toggle], body body .routes-container .switch-container [class^=switch-toggle], .routes-container body .routes-container .switch-container [class^=switch-toggle] {
+  font-size: 26px;
+  font-weight: bold;
+  color: #a0a0a0;
+  padding: 12px 72px;
+  user-select: none;
+  cursor: pointer;
+  z-index: 2;
+  text-align: center;
+  transition: color 0.5s;
+}
+@media (max-width: 640px) {
+  html body .routes-container .switch-container [class^=switch-toggle], body body .routes-container .switch-container [class^=switch-toggle], .routes-container body .routes-container .switch-container [class^=switch-toggle] {
+    padding: 12px 36px;
+  }
+}
+html body .routes-container .switch-container [class^=switch-toggle]:nth-child(1), body body .routes-container .switch-container [class^=switch-toggle]:nth-child(1), .routes-container body .routes-container .switch-container [class^=switch-toggle]:nth-child(1) {
+  border-radius: 0 14px 14px 0;
+}
+html body .routes-container .switch-container [class^=switch-toggle]:nth-child(2), body body .routes-container .switch-container [class^=switch-toggle]:nth-child(2), .routes-container body .routes-container .switch-container [class^=switch-toggle]:nth-child(2) {
+  border-radius: 14px 0 0 14px;
+}
+html body .routes-container .switch-container [class^=switch-toggle][class*=-selected], body body .routes-container .switch-container [class^=switch-toggle][class*=-selected], .routes-container body .routes-container .switch-container [class^=switch-toggle][class*=-selected] {
+  color: white;
+}
+html body .routes-container .switch-container [class^=switch-toggle] .toggle-icon, body body .routes-container .switch-container [class^=switch-toggle] .toggle-icon, .routes-container body .routes-container .switch-container [class^=switch-toggle] .toggle-icon {
+  margin-right: 8px;
+}
+html body .routes-container .carousel-cell, body body .routes-container .carousel-cell, .routes-container body .routes-container .carousel-cell {
+  width: calc(100% - 20px);
+  margin: 20px;
+}
+html body .routes-container .cards-grid, body body .routes-container .cards-grid, .routes-container body .routes-container .cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 0 16px;
+}
+@media (max-width: 640px) {
+  html body .routes-container .cards-grid, body body .routes-container .cards-grid, .routes-container body .routes-container .cards-grid {
+    display: flex;
+    flex-direction: column;
+  }
+}
+html body .routes-container .cards-grid [class^=card-], body body .routes-container .cards-grid [class^=card-], .routes-container body .routes-container .cards-grid [class^=card-] {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  background: white;
+  padding: 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+@media (max-width: 640px) {
+  html body .routes-container .cards-grid [class^=card-], body body .routes-container .cards-grid [class^=card-], .routes-container body .routes-container .cards-grid [class^=card-] {
+    margin: 8px 0;
+    width: 100%;
+  }
+}
+html body .routes-container .cards-grid [class^=card-] .icon-card, body body .routes-container .cards-grid [class^=card-] .icon-card, .routes-container body .routes-container .cards-grid [class^=card-] .icon-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 24px;
+  margin-right: 20px;
+  width: 56px;
+  height: 56px;
+}
+html body .routes-container .cards-grid [class^=card-] .icon-card:after, body body .routes-container .cards-grid [class^=card-] .icon-card:after, .routes-container body .routes-container .cards-grid [class^=card-] .icon-card:after {
+  content: "";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border-width: 2px;
+  border-style: solid;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+html body .routes-container .cards-grid [class^=card-] .inner-card, body body .routes-container .cards-grid [class^=card-] .inner-card, .routes-container body .routes-container .cards-grid [class^=card-] .inner-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html body .routes-container .cards-grid [class^=card-] .inner-card .label-card, body body .routes-container .cards-grid [class^=card-] .inner-card .label-card, .routes-container body .routes-container .cards-grid [class^=card-] .inner-card .label-card {
+  font-size: 16px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.4);
+}
+html body .routes-container .cards-grid [class^=card-] .inner-card .value-card, body body .routes-container .cards-grid [class^=card-] .inner-card .value-card, .routes-container body .routes-container .cards-grid [class^=card-] .inner-card .value-card {
+  font-size: 22px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.8);
+}
+html body .routes-container .cards-grid [class^=card-] .inner-card .value-card:before, body body .routes-container .cards-grid [class^=card-] .inner-card .value-card:before, .routes-container body .routes-container .cards-grid [class^=card-] .inner-card .value-card:before {
+  content: "R$ ";
+  font-size: 16px;
+  margin-right: 4px;
+}
+html body .routes-container .cards-grid [class^=card-].card-balance, body body .routes-container .cards-grid [class^=card-].card-balance, .routes-container body .routes-container .cards-grid [class^=card-].card-balance {
+  grid-column: 1/3;
+  padding: 24px;
+}
+html body .routes-container .cards-grid [class^=card-].card-balance .icon-card, body body .routes-container .cards-grid [class^=card-].card-balance .icon-card, .routes-container body .routes-container .cards-grid [class^=card-].card-balance .icon-card {
+  background: palegreen;
+  width: 88px;
+  height: 88px;
+  font-size: 32px;
+}
+html body .routes-container .cards-grid [class^=card-].card-balance .icon-card:after, body body .routes-container .cards-grid [class^=card-].card-balance .icon-card:after, .routes-container body .routes-container .cards-grid [class^=card-].card-balance .icon-card:after {
+  color: forestgreen;
+  border-color: forestgreen;
+  border-width: 3px;
+  width: 48px;
+  height: 48px;
+}
+html body .routes-container .cards-grid [class^=card-].card-balance .inner-card .value-card, body body .routes-container .cards-grid [class^=card-].card-balance .inner-card .value-card, .routes-container body .routes-container .cards-grid [class^=card-].card-balance .inner-card .value-card {
+  font-size: 42px;
+}
+@media (max-width: 640px) {
+  html body .routes-container .cards-grid [class^=card-].card-balance .inner-card .value-card, body body .routes-container .cards-grid [class^=card-].card-balance .inner-card .value-card, .routes-container body .routes-container .cards-grid [class^=card-].card-balance .inner-card .value-card {
+    font-size: 32px;
+  }
+}
+html body .routes-container .cards-grid [class^=card-].card-balance .inner-card .value-card:before, body body .routes-container .cards-grid [class^=card-].card-balance .inner-card .value-card:before, .routes-container body .routes-container .cards-grid [class^=card-].card-balance .inner-card .value-card:before {
+  font-size: 24px;
+}
+html body .routes-container .cards-grid [class^=card-].card-blocked-balance .icon-card, body body .routes-container .cards-grid [class^=card-].card-blocked-balance .icon-card, .routes-container body .routes-container .cards-grid [class^=card-].card-blocked-balance .icon-card {
+  background: lightcoral;
+}
+html body .routes-container .cards-grid [class^=card-].card-blocked-balance .icon-card:after, body body .routes-container .cards-grid [class^=card-].card-blocked-balance .icon-card:after, .routes-container body .routes-container .cards-grid [class^=card-].card-blocked-balance .icon-card:after {
+  color: firebrick;
+  border-color: firebrick;
+}
+html body .routes-container .cards-grid [class^=card-].card-total-balance .icon-card, body body .routes-container .cards-grid [class^=card-].card-total-balance .icon-card, .routes-container body .routes-container .cards-grid [class^=card-].card-total-balance .icon-card {
+  background: lightblue;
+}
+html body .routes-container .cards-grid [class^=card-].card-total-balance .icon-card:after, body body .routes-container .cards-grid [class^=card-].card-total-balance .icon-card:after, .routes-container body .routes-container .cards-grid [class^=card-].card-total-balance .icon-card:after {
+  color: #50a6c2;
+}
+html body .routes-container .extract-card, body body .routes-container .extract-card, .routes-container body .routes-container .extract-card {
+  background: white;
+  border-radius: 8px;
+  padding: 0 8px;
+  overflow: auto;
+  max-height: 350px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+html body .routes-container .extract-card::-webkit-scrollbar, body body .routes-container .extract-card::-webkit-scrollbar, .routes-container body .routes-container .extract-card::-webkit-scrollbar {
+  width: 12px;
+}
+html body .routes-container .extract-card::-webkit-scrollbar-thumb, body body .routes-container .extract-card::-webkit-scrollbar-thumb, .routes-container body .routes-container .extract-card::-webkit-scrollbar-thumb {
+  background-clip: padding-box;
+  border: 4px solid transparent;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+}
+html body .routes-container .extract-card::-webkit-scrollbar-corner, body body .routes-container .extract-card::-webkit-scrollbar-corner, .routes-container body .routes-container .extract-card::-webkit-scrollbar-corner {
+  background-color: transparent;
+}
+html body .routes-container .extract-card .extract-table th, body body .routes-container .extract-card .extract-table th, .routes-container body .routes-container .extract-card .extract-table th {
+  text-align: left;
+  color: rgba(0, 0, 0, 0.8);
+  padding: 16px 16px 16px 0;
+}
+html body .routes-container .extract-card .extract-table th:first-child, body body .routes-container .extract-card .extract-table th:first-child, .routes-container body .routes-container .extract-card .extract-table th:first-child {
+  padding: 16px;
+}
+html body .routes-container .extract-card .extract-table td, body body .routes-container .extract-card .extract-table td, .routes-container body .routes-container .extract-card .extract-table td {
+  color: rgba(0, 0, 0, 0.7);
+  padding: 12px;
+  white-space: nowrap;
+}
+html body .routes-container .extract-card .extract-table td[class^=transaction-value], body body .routes-container .extract-card .extract-table td[class^=transaction-value], .routes-container body .routes-container .extract-card .extract-table td[class^=transaction-value] {
+  font-size: 18px;
+  font-weight: bold;
+}
+html body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-positive], body body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-positive], .routes-container body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-positive] {
+  color: forestgreen;
+}
+html body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-positive]:before, body body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-positive]:before, .routes-container body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-positive]:before {
+  content: "+R$ ";
+}
+html body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-negative], body body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-negative], .routes-container body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-negative] {
+  color: crimson;
+}
+html body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-negative]:before, body body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-negative]:before, .routes-container body .routes-container .extract-card .extract-table td[class^=transaction-value][class*=-negative]:before {
+  content: "-R$ ";
+}
+html body .routes-container .extract-card .extract-table td .transaction-details-btn, body body .routes-container .extract-card .extract-table td .transaction-details-btn, .routes-container body .routes-container .extract-card .extract-table td .transaction-details-btn {
+  font-family: "Open Sans";
+  font-weight: bold;
+  background: #50a6c2;
+  outline: none;
+  color: white;
+  border: none;
+  border-radius: 24px;
+  padding: 8px 16px;
+}

@@ -16,7 +16,7 @@ if(isset($_POST['sub'])){
       header ('location:homeFun.php');
     }
    else{
-       echo 'username or password does not exist';
+       echo '<div style="color:red; background-color: white">Usuário ou senha incorreta!</div>';
    }
   
    
@@ -29,6 +29,7 @@ if(isset($_POST['sub'])){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Funcionario | Log in</title>
+  <link rel="icon" href="image/BytesLG.png">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -71,7 +72,7 @@ if(isset($_POST['sub'])){
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
               <label for="remember">
-                Remember Me
+                Lembre-me
               </label>
             </div>
           </div>

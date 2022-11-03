@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Pagar Boleto</title>
   <link rel="stylesheet" href="./style.css">
+  <link rel="icon" href="image/BytesLG.png">
 
 </head>
 <body>

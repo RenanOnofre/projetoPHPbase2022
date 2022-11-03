@@ -13,7 +13,7 @@ if(isset($_POST['sub'])){
       header ('location:homeAgencia.php');
    }
    else{
-       echo 'Acesso inválido';
+       echo '<div style="color:red; background-color: white">Acesso inválido!</div>';
    }
   
    
@@ -26,6 +26,7 @@ if(isset($_POST['sub'])){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Agência | Log in</title>
+  <link rel="icon" href="image/BytesLG.png">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -68,7 +69,7 @@ if(isset($_POST['sub'])){
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
               <label for="remember">
-                Remember Me
+                Lembre me
               </label>
             </div>
           </div>

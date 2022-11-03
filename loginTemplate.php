@@ -13,7 +13,7 @@ if(isset($_POST['sub'])){
       header ('location:homeTemplate.php');
    }
    else{
-       echo 'username or password does not exist';
+       echo '<div style="color:red; background-color: white">Usuário ou senha incorreta!</div>';
    }
   
    
@@ -26,6 +26,7 @@ if(isset($_POST['sub'])){
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AdminLTE 3 | Log in</title>
+  <link rel="icon" href="image/BytesLG.png">
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -68,13 +69,13 @@ if(isset($_POST['sub'])){
             <div class="icheck-primary">
               <input type="checkbox" id="remember">
               <label for="remember">
-                Remember Me
+                Lembre-me
               </label>
             </div>
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block" name="sub">Sign In</button>
+            <button type="submit" class="btn btn-primary btn-block" name="sub">Entrar</button>
           </div>
           <!-- /.col -->
         </div>
@@ -86,11 +87,8 @@ if(isset($_POST['sub'])){
       </div>
       <!-- /.social-auth-links -->
 
-      <p class="mb-1">
-        <a href="forgot-password.html">I forgot my password</a>
-      </p>
       <p class="mb-0">
-        <a href="register.html" class="text-center">Register a new membership</a>
+        <a href="register.html" class="text-center">Registrar novo usuário</a>
       </p>
     </div>
     <!-- /.login-card-body -->
