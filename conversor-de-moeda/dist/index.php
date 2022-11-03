@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="./style.css">
 
 </head>
-<body>
+<body style="background: linear-gradient(50deg, #f3c680, #a1e3e2);">
 <!-- partial:index.partial.html -->
 <body>
 	<main>

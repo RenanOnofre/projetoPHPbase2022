@@ -79,7 +79,7 @@
               <div class="icon">
                 <i class="ion ion-ios-barcode-outline"></i>
               </div>
-              <a href="#" class="small-box-footer">Pagar <i class="fas fa-arrow-circle-right"></i></a>
+              <a href="checkout-pagar-mereact/dist/index.php" class="small-box-footer">Pagar <i class="fas fa-arrow-circle-right"></i></a>
             </div>
           </div>
           <!-- ./col -->
