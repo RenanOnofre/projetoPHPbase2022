@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Vue Crypto Price Wall</title>
+  <title>Criptomoedas</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -21,7 +21,8 @@
       </div>
     </div>
     <div class="text-primary if-medium">
-      <h1 class="text-nowrap text-condense shadow-text">Crypto 24h Change</h1>
+      <h1 class="text-nowrap text-condense shadow-text">Mudança - 24h
+</h1>
     </div>
     <div class="flex-row flex-middle">
       <div class="dropdown">

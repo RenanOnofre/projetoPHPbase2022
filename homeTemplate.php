@@ -156,6 +156,11 @@
 <a class="users-list-name" href="mensagem/dist/index.php">Chat</a>
 <span class="users-list-date">Assistente Virtual</span>
 </li>
+<li>
+<img src="image/investimento.png" alt="User Image">
+<a class="users-list-name" href="cripto/dist/index.php">Investimento</a>
+<span class="users-list-date">Criptomoedas</span>
+</li>
 </ul>
 
 </div>
