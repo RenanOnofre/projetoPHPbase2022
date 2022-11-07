@@ -52,7 +52,7 @@ $(window).on('keydown', function(e) {
 var Fake = [
   'Olá, sou seu assistente virtual',
   'Em que posso ajudar?',
-  'Ok, anotamos seu problema e já enviamos para nosso suporte. Logo entrará em contato com você!',
+  'Ok, anotamos seu problema e já enviamos para nosso suporte. Logo entraremos em contato com você!',
   ':)'
 ]
 
@@ -60,12 +60,12 @@ function fakeMessage() {
   if ($('.message-input').val() != '') {
     return false;
   }
-  $('<div class="message loading new"><figure class="avatar"><img src="../../image/anon.png" /></figure><span></span></div>').appendTo($('.mCSB_container'));
+  $('<div class="message loading new"><figure class="avatar"><img src="../../image/robinho.png" /></figure><span></span></div>').appendTo($('.mCSB_container'));
   updateScrollbar();
 
   setTimeout(function() {
     $('.message.loading').remove();
-    $('<div class="message new"><figure class="avatar"><img src="../../image/anon.png" /></figure>' + Fake[i] + '</div>').appendTo($('.mCSB_container')).addClass('new');
+    $('<div class="message new"><figure class="avatar"><img src="../../image/robinho.png" /></figure>' + Fake[i] + '</div>').appendTo($('.mCSB_container')).addClass('new');
     setDate();
     updateScrollbar();
     i++;

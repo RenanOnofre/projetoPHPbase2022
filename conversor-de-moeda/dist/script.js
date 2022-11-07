@@ -7,7 +7,7 @@ select.addEventListener("change", calcular)
 
 function calcular(){
 	var inputValue = Number(input.value)
-	var valorDolar = inputValue / 5.18
+	var valorDolar = inputValue / 5.11
 	var valorEuro = inputValue / 5.13
 	switch(select.value){
 		case "dolar":

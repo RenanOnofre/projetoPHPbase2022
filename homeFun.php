@@ -350,7 +350,7 @@
                       <label for="todoCheck1"></label>
                     </div>
                     <!-- todo text -->
-                    <span class="text">Atualização do perfeil Alciomar Holanda</span>
+                    <span class="text">Atualização do perfil Alciomar Holanda</span>
                     <!-- Emphasis label -->
                     <small class="badge badge-danger"><i class="far fa-clock"></i> Pendente</small>
                     <!-- General tools such as edit or delete-->

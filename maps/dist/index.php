@@ -2,9 +2,11 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - maps</title>
+  <title>Localização</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
 <link rel="stylesheet" href="./style.css">
+<link rel="icon" href="../../image/BytesLG.png">
+
 
 </head>
 <body>

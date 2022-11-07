@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Boleto bancario </title>
+  <title>Boleto bancário </title>
   <link rel="stylesheet" href="./style.css">
   <link rel="icon" href="../../image/BytesLG.png">
   
@@ -24,7 +24,7 @@
         Pagável em qualquer agência bancária, lotérica .
           </td>
       <td>
-        <span> Vencimento </span>18/11/2022
+        <span> Vencimento </span>11/11/2022
       </td>
     </tr>
     <tr>
@@ -37,7 +37,7 @@
     </tr>
     <tr>
       <td>
-        <span> Data docto </span> 18/11/2020
+        <span> Data docto </span> 11/11/2020
       </td>
       <td colspan=2>
         <span> Núm. docto </span> 1000258
@@ -49,7 +49,7 @@
         <span> Aceite </span> N
       </td>
       <td>
-        <span> Data processamento </span>17/11/2020
+        <span> Data processamento </span>10/11/2020
       </td>
       <td>
         <span> Carteira / nosso número </span>

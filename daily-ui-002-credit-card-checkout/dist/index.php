@@ -5,7 +5,7 @@
   <title>Meus Cartões</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css2?family=Inconsolata&amp;family=Open+Sans&amp;display=swap'><link rel="stylesheet" href="./style.css">
-<link rel="icon" href="image/BytesLG.png">
+<link rel="icon" href="../../image/BytesLG.png">
 
 <script type="text/javascript">
 			var dolares = 0;

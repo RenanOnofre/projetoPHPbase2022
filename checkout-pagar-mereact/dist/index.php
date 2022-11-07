@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>Pagar Boleto</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="image/BytesLG.png">
+  <link rel="icon" href="../../image/BytesLG.png">
 
 </head>
 <body>
@@ -15,11 +15,11 @@
     <title>React Checkout</title>
     <script src="https://assets.pagar.me/checkout/1.1.0/checkout.js"></script>
   </head>
-  <body>
+  <body style='background: linear-gradient(50deg, #f3c680, #a1e3e2);'>
     <div>
     <div id="react-container"></div> </div>
     <!-- script carregado aqui --><div>
-    <div> <button><a href="../../homeTemplate.php"><i class="fas fa-trash-alt"></i>Voltar </a></button></div> </div>
+    <div><a href="../../homeTemplate.php"><i class="fas fa-trash-alt"></i>Voltar </a></div> </div>
   </body>
 </html>
 <!-- partial -->

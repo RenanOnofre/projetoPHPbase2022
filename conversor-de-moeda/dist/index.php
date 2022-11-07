@@ -2,9 +2,10 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>CodePen - Conversor de Moeda</title>
+  <title>Conversor de Moeda</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="image/BytesLG.png">
+  <link rel="icon" href="../../image/BytesLG.png">
+
 
 </head>
 <body style="background: linear-gradient(50deg, #f3c680, #a1e3e2);">

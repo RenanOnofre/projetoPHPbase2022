@@ -6,7 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans'>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.3/jquery.mCustomScrollbar.min.css'><link rel="stylesheet" href="./style.css">
-<link rel="icon" href="image/BytesLG.png">
+<link rel="icon" href="../../image/BytesLG.png">
 
 </head>
 <body>
@@ -28,7 +28,7 @@ Hope you like it :)
     <h1>Robinho</h1>
     <h2>Assistente virtual</h2>
     <figure class="avatar">
-      <img src="../../image/anon.png" /></figure>
+      <img src="../../image/robinho.png" /></figure>
   </div>
   <div class="messages">
     <div class="messages-content"></div>
