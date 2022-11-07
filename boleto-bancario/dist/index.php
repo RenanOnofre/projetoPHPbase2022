@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <title>CodePen - Boleto bancario </title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="icon" href="image/BytesLG.png">
+  <link rel="icon" href="../../image/BytesLG.png">
+  
 
 </head>
 <body>
