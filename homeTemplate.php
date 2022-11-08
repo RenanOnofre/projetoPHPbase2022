@@ -11,7 +11,36 @@
 
   <!-- Preloader -->
 
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
 
+<script>
+
+
+    google.charts.load('current', {'packages':['corechart']});
+
+    function desenharPizza (){
+
+        var tabela = new google.visualization.DataTable();
+        tabela.addColumn('string','categorias');
+        tabela.addColumn('number','valores');
+        tabela.addRows([
+
+            ['Inovação',10],
+            ['Determinação',10],
+            ['Franqueza',10],
+            ['Disponibilidade',10],
+            ['Segurança',50],
+            ['Simplicidade',10]
+        ]);
+
+        var grafico = new google.visualization.PieChart(document.getElementById('graficoPizza'));
+        grafico.draw(tabela);
+}
+
+google.charts.setOnLoadCallback(desenharPizza);
+
+
+</script>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper" style="background: linear-gradient(50deg, #f3c680, #a1e3e2);">
@@ -253,21 +282,21 @@
               <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img class="d-block w-100" src="image/pix.png" alt="Primeiro Slide" alt="User Image" >
+      <img class="d-block w-100" src="image/Heloisa.jpeg" alt="Primeiro Slide" alt="User Image" >
       <div class="carousel-caption d-none d-md-block">
     <h5>Heloisa Gomes Guimarães</h5>
     <p>Designer Digital</p>
     </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="image/anon.png" alt="Segundo Slide" alt="User Image">
+      <img class="d-block w-100" src="image/Renan.jpeg" alt="Segundo Slide" alt="User Image">
       <div class="carousel-caption d-none d-md-block">
     <h5>Renan Onofre Cruvello da Silva</h5>
     <p>Desenvolvedor de Software</p>
     </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="image/BB.png" alt="Terceiro Slide" alt="User Image">
+      <img class="d-block w-100" src="image/Samuel.jpeg" alt="Terceiro Slide" alt="User Image">
       <div class="carousel-caption d-none d-md-block">
     <h5>Samuel Yuri Venturini</h5>
     <p>CopyWritter</p>
@@ -360,34 +389,8 @@
                 </div>
               </div>
               <div class="card-body">
-                <?php include 'line/dist/index.html' ?>
-              </div>
-              <!-- /.card-body -->
-              <div class="card-footer bg-transparent">
-                <div class="row">
-                  <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="20" data-width="60" data-height="60"
-                           data-fgColor="#39CCCC">
+              <div id="graficoPizza"></div>
 
-                    <div class="text-white">Mail-Orders</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="50" data-width="60" data-height="60"
-                           data-fgColor="#39CCCC">
-
-                    <div class="text-white">Online</div>
-                  </div>
-                  <!-- ./col -->
-                  <div class="col-4 text-center">
-                    <input type="text" class="knob" data-readonly="true" value="30" data-width="60" data-height="60"
-                           data-fgColor="#39CCCC">
-
-                    <div class="text-white">In-Store</div>
-                  </div>
-                  <!-- ./col -->
-                </div>
-                <!-- /.row -->
               </div>
               <!-- /.card-footer -->
             </div>

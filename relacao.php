@@ -74,7 +74,7 @@
                       
                       <td>
                           <a>
-                          <?php echo $f['id'];?>
+                          <?php echo $f['nome'];?>
                           </a>
                       </td>
                       <td>

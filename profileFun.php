@@ -58,8 +58,7 @@
             <div class="card card-primary card-outline">
               <div class="card-body box-profile">
                 <div class="text-center">
-                <img src="image/anon.png" class="img-circle elevation-2"
-                       alt="User profile picture" width=100>
+                <img src="<?php echo $f['image'];?>" class="img-circle elevation-2" alt="User profile picture" width=100>
                 </div>
 
                 <h3 class="profile-username text-center"><?php echo $f['username'];?></h3>
