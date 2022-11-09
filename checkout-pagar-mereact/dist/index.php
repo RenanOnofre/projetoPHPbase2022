@@ -16,10 +16,14 @@
     <script src="https://assets.pagar.me/checkout/1.1.0/checkout.js"></script>
   </head>
   <body style='background: linear-gradient(50deg, #f3c680, #a1e3e2);'>
+  <div><a class="the-most" target="_blank" href="https://samuelneves68.wixsite.com/bytes-bank">
+  <img src="../../image/Bytes.png">
+</a> </div>
     <div>
     <div id="react-container"></div> </div>
     <!-- script carregado aqui --><div>
     <div><a href="../../homeTemplate.php"><i class="fas fa-trash-alt"></i>Voltar </a></div> </div>
+    
   </body>
 </html>
 <!-- partial -->

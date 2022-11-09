@@ -152,6 +152,7 @@
 			</div>
 		</div>
 	</div>
+	
 </div>
 <!-- partial -->
   <script src='https://cdnjs.cloudflare.com/ajax/libs/flickity/2.2.1/flickity.pkgd.min.js'></script><script  src="./script.js"></script>

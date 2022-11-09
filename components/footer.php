@@ -1,5 +1,5 @@
 <footer class="main-footer">
-    <strong>Bytes Bank &copy; 2022 <a href="https://adminlte.io">Saiba mais</a>.</strong>
+    <strong>Bytes Bank &copy; 2022 <a href="https://samuelneves68.wixsite.com/bytes-bank">Saiba mais</a>.</strong>
     <div class="float-right d-none d-sm-inline-block">
       <b>Versão</b> 1.0
     </div>

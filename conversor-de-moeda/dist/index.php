@@ -27,7 +27,7 @@
 </main>
 
 	
-	<a class="the-most" target="_blank" href="https://wordpress.com/home/bytesbank.wordpress.com">
+	<a class="the-most" target="_blank" href="https://samuelneves68.wixsite.com/bytes-bank">
   <img src="../../image/Bytes.png" class="page-logo" alt="">
 	</a>
 </body>
