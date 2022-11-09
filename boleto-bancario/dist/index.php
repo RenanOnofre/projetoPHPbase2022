@@ -117,6 +117,7 @@
   </tbody>
 </table>
 <!-- partial -->
-  
+  <div> <a href="../../image/Boleto.pdf" download="Boleto.pdf">Baixar Boleto</a>
+</div>
 </body>
 </html>
