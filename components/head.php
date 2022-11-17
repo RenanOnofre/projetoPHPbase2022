@@ -26,6 +26,13 @@
   <link rel="stylesheet" href="AdminLTE-3.2.0/plugins/daterangepicker/daterangepicker.css">
   <!-- summernote -->
   <link rel="stylesheet" href="AdminLTE-3.2.0/plugins/summernote/summernote-bs4.min.css">
+
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+<df-messenger
+  chat-title="BootChat"
+  agent-id="473b90ec-27bb-413b-95b0-25fc67ef2042"
+  language-code="en"
+></df-messenger>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
